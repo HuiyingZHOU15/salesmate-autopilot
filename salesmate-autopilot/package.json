@@ -1,0 +1,19 @@
+{
+  "name": "salesmate-autopilot",
+  "version": "0.1.0",
+  "private": true,
+  "description": "SalesMate AutoPilot demo: an agentic sales copilot for automotive retail.",
+  "scripts": {
+    "start": "node backend/src/server.js",
+    "dev": "node backend/src/server.js",
+    "check": "node backend/src/server.js --check"
+  },
+  "keywords": [
+    "agent",
+    "automotive",
+    "sales",
+    "dms",
+    "demo"
+  ],
+  "license": "MIT"
+}

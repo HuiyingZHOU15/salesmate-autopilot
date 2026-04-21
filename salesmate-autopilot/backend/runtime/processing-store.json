@@ -1,0 +1,2170 @@
+[
+  {
+    "sessionId": "session-1776458411925",
+    "customerRef": "cust-zhang-001",
+    "aiProfile": {
+      "intentTags": [
+        "家庭出行"
+      ],
+      "preferenceTags": [
+        "6/7 座",
+        "安全",
+        "舒适"
+      ],
+      "objectionTags": [
+        "用车成本顾虑"
+      ],
+      "competitorList": [],
+      "purchaseProbability": 60
+    },
+    "localOnly": {
+      "transcriptText": "customer: 家里两个小孩，周末还要带老人出去，所以想看 6 座或者 7 座 SUV。",
+      "ontologyCache": [
+        "第三排空间",
+        "用车成本",
+        "智能座舱",
+        "置换补贴",
+        "6/7 座",
+        "安全",
+        "舒适"
+      ],
+      "cardRescueEvents": [],
+      "salesActionLog": [
+        {
+          "agent": "ListenerAgent",
+          "summary": "识别意图：家庭出行"
+        },
+        {
+          "agent": "ProfileAgent",
+          "summary": "画像更新：张先生，购买概率 60%"
+        },
+        {
+          "agent": "RecommendationAgent",
+          "summary": "推荐 理想 L8 Pro"
+        },
+        {
+          "agent": "FollowupAgent",
+          "summary": "生成 中意向 回访策略"
+        }
+      ],
+      "vectorStatus": "mocked-for-demo"
+    },
+    "dmsArchive": {
+      "ai_summary": "家庭结构：两个小孩，周末会带老人出行；预算区间：待确认；重点关注：第三排空间、用车成本、智能座舱、置换补贴；已关注竞品：汉兰达、途昂",
+      "intent_tags": [
+        "家庭出行"
+      ],
+      "objection_tags": [
+        "用车成本顾虑"
+      ],
+      "competitor_list": [],
+      "purchase_probability": 60,
+      "next_followup_time": "3-5 天内",
+      "followup_script_draft": "张先生，您上次比较关注第三排和用车成本，我帮您把 L8 和汉兰达的核心差异整理好了，也可以顺便帮您测算旧车置换补贴。",
+      "report_pdf_url": "/reports/session-1776458411925.html"
+    },
+    "syncStatus": "PENDING",
+    "lastError": null,
+    "updatedAt": "2026-04-17T20:40:11.927Z"
+  },
+  {
+    "sessionId": "session-1776458654268",
+    "customerRef": "cust-zhang-001",
+    "aiProfile": {
+      "intentTags": [
+        "家庭出行"
+      ],
+      "preferenceTags": [
+        "6/7 座",
+        "安全",
+        "舒适"
+      ],
+      "objectionTags": [
+        "用车成本顾虑"
+      ],
+      "competitorList": [],
+      "purchaseProbability": 60
+    },
+    "localOnly": {
+      "transcriptText": "customer: 家里两个小孩，周末还要带老人出去，所以想看 6 座或者 7 座 SUV。",
+      "ontologyCache": [
+        "第三排空间",
+        "用车成本",
+        "智能座舱",
+        "置换补贴",
+        "6/7 座",
+        "安全",
+        "舒适"
+      ],
+      "cardRescueEvents": [],
+      "salesActionLog": [
+        {
+          "agent": "ListenerAgent",
+          "summary": "识别意图：家庭出行"
+        },
+        {
+          "agent": "ProfileAgent",
+          "summary": "画像更新：张先生，购买概率 60%"
+        },
+        {
+          "agent": "RecommendationAgent",
+          "summary": "推荐 理想 L8 Pro"
+        },
+        {
+          "agent": "FollowupAgent",
+          "summary": "生成 中意向 回访策略"
+        }
+      ],
+      "vectorStatus": "mocked-for-demo"
+    },
+    "dmsArchive": {
+      "ai_summary": "家庭结构：两个小孩，周末会带老人出行；预算区间：待确认；重点关注：第三排空间、用车成本、智能座舱、置换补贴；已关注竞品：汉兰达、途昂",
+      "intent_tags": [
+        "家庭出行"
+      ],
+      "objection_tags": [
+        "用车成本顾虑"
+      ],
+      "competitor_list": [],
+      "purchase_probability": 60,
+      "next_followup_time": "3-5 天内",
+      "followup_script_draft": "张先生，您上次比较关注第三排和用车成本，我帮您把 L8 和汉兰达的核心差异整理好了，也可以顺便帮您测算旧车置换补贴。",
+      "report_pdf_url": "/reports/session-1776458654268.html"
+    },
+    "syncStatus": "PENDING",
+    "lastError": null,
+    "updatedAt": "2026-04-17T20:44:14.271Z"
+  },
+  {
+    "sessionId": "session-1776458786128",
+    "customerRef": "cust-zhang-001",
+    "aiProfile": {
+      "intentTags": [
+        "家庭出行"
+      ],
+      "preferenceTags": [
+        "6/7 座",
+        "安全",
+        "舒适"
+      ],
+      "objectionTags": [
+        "用车成本顾虑"
+      ],
+      "competitorList": [],
+      "purchaseProbability": 60
+    },
+    "localOnly": {
+      "transcriptText": "customer: 家里两个小孩，周末还要带老人出去，所以想看 6 座或者 7 座 SUV。",
+      "ontologyCache": [
+        "第三排空间",
+        "用车成本",
+        "智能座舱",
+        "置换补贴",
+        "6/7 座",
+        "安全",
+        "舒适"
+      ],
+      "cardRescueEvents": [],
+      "salesActionLog": [
+        {
+          "agent": "ListenerAgent",
+          "summary": "识别意图：家庭出行"
+        },
+        {
+          "agent": "ProfileAgent",
+          "summary": "画像更新：张先生，购买概率 60%"
+        },
+        {
+          "agent": "RecommendationAgent",
+          "summary": "推荐 理想 L8 Pro"
+        },
+        {
+          "agent": "FollowupAgent",
+          "summary": "生成 中意向 回访策略"
+        }
+      ],
+      "vectorStatus": "mocked-for-demo"
+    },
+    "dmsArchive": {
+      "ai_summary": "家庭结构：两个小孩，周末会带老人出行；预算区间：待确认；重点关注：第三排空间、用车成本、智能座舱、置换补贴；已关注竞品：汉兰达、途昂",
+      "intent_tags": [
+        "家庭出行"
+      ],
+      "objection_tags": [
+        "用车成本顾虑"
+      ],
+      "competitor_list": [],
+      "purchase_probability": 60,
+      "next_followup_time": "3-5 天内",
+      "followup_script_draft": "张先生，您上次比较关注第三排和用车成本，我帮您把 L8 和汉兰达的核心差异整理好了，也可以顺便帮您测算旧车置换补贴。",
+      "report_pdf_url": "/reports/session-1776458786128.html"
+    },
+    "syncStatus": "PENDING",
+    "lastError": null,
+    "updatedAt": "2026-04-17T20:46:26.131Z"
+  },
+  {
+    "sessionId": "session-1776458950577",
+    "customerRef": "cust-zhang-001",
+    "aiProfile": {
+      "intentTags": [
+        "家庭出行"
+      ],
+      "preferenceTags": [
+        "6/7 座",
+        "安全",
+        "舒适"
+      ],
+      "objectionTags": [
+        "用车成本顾虑"
+      ],
+      "competitorList": [],
+      "purchaseProbability": 60
+    },
+    "localOnly": {
+      "transcriptText": "customer: 家里两个小孩，周末还要带老人出去，所以想看 6 座或者 7 座 SUV。",
+      "ontologyCache": [
+        "第三排空间",
+        "用车成本",
+        "智能座舱",
+        "置换补贴",
+        "6/7 座",
+        "安全",
+        "舒适"
+      ],
+      "cardRescueEvents": [],
+      "salesActionLog": [
+        {
+          "agent": "ListenerAgent",
+          "summary": "识别意图：家庭出行"
+        },
+        {
+          "agent": "ProfileAgent",
+          "summary": "画像更新：张先生，购买概率 60%"
+        },
+        {
+          "agent": "RecommendationAgent",
+          "summary": "推荐 理想 L8 Pro"
+        },
+        {
+          "agent": "FollowupAgent",
+          "summary": "生成 中意向 回访策略"
+        }
+      ],
+      "vectorStatus": "mocked-for-demo"
+    },
+    "dmsArchive": {
+      "ai_summary": "家庭结构：两个小孩，周末会带老人出行；预算区间：待确认；重点关注：第三排空间、用车成本、智能座舱、置换补贴；已关注竞品：汉兰达、途昂",
+      "intent_tags": [
+        "家庭出行"
+      ],
+      "objection_tags": [
+        "用车成本顾虑"
+      ],
+      "competitor_list": [],
+      "purchase_probability": 60,
+      "next_followup_time": "3-5 天内",
+      "followup_script_draft": "张先生，您上次比较关注第三排和用车成本，我帮您把 L8 和汉兰达的核心差异整理好了，也可以顺便帮您测算旧车置换补贴。",
+      "report_pdf_url": "/reports/session-1776458950577.html"
+    },
+    "syncStatus": "PENDING",
+    "lastError": null,
+    "updatedAt": "2026-04-17T20:49:10.583Z"
+  },
+  {
+    "sessionId": "session-1776458963093",
+    "customerRef": "cust-zhang-001",
+    "aiProfile": {
+      "intentTags": [
+        "竞品对比"
+      ],
+      "preferenceTags": [
+        "空间",
+        "油耗",
+        "保值率"
+      ],
+      "objectionTags": [
+        "竞品比较",
+        "用车成本顾虑"
+      ],
+      "competitorList": [
+        "汉兰达"
+      ],
+      "purchaseProbability": 58
+    },
+    "localOnly": {
+      "transcriptText": "customer: 那理想 L8 比汉兰达贵在哪？",
+      "ontologyCache": [
+        "第三排空间",
+        "用车成本",
+        "智能座舱",
+        "置换补贴",
+        "空间",
+        "油耗",
+        "保值率"
+      ],
+      "cardRescueEvents": [
+        {
+          "type": "competitor_response",
+          "title": "理想 L8 vs 汉兰达",
+          "at": "2026-04-17T20:49:23.096Z"
+        }
+      ],
+      "salesActionLog": [
+        {
+          "agent": "ListenerAgent",
+          "summary": "识别意图：竞品对比"
+        },
+        {
+          "agent": "ProfileAgent",
+          "summary": "画像更新：张先生，购买概率 58%"
+        },
+        {
+          "agent": "RecommendationAgent",
+          "summary": "推荐 理想 L8 Pro"
+        },
+        {
+          "agent": "FollowupAgent",
+          "summary": "生成 中意向 回访策略"
+        }
+      ],
+      "vectorStatus": "mocked-for-demo"
+    },
+    "dmsArchive": {
+      "ai_summary": "家庭结构：待确认；预算区间：待确认；重点关注：第三排空间、用车成本、智能座舱、置换补贴；已关注竞品：汉兰达、途昂",
+      "intent_tags": [
+        "竞品对比"
+      ],
+      "objection_tags": [
+        "竞品比较",
+        "用车成本顾虑"
+      ],
+      "competitor_list": [
+        "汉兰达"
+      ],
+      "purchase_probability": 58,
+      "next_followup_time": "3-5 天内",
+      "followup_script_draft": "张先生，您上次比较关注第三排和用车成本，我帮您把 L8 和汉兰达的核心差异整理好了，也可以顺便帮您测算旧车置换补贴。",
+      "report_pdf_url": "/reports/session-1776458963093.html"
+    },
+    "syncStatus": "PENDING",
+    "lastError": null,
+    "updatedAt": "2026-04-17T20:49:23.096Z"
+  },
+  {
+    "sessionId": "session-1776459300653",
+    "customerRef": "cust-zhang-001",
+    "aiProfile": {
+      "intentTags": [
+        "家庭出行"
+      ],
+      "preferenceTags": [
+        "6/7 座",
+        "安全",
+        "舒适"
+      ],
+      "objectionTags": [
+        "用车成本顾虑"
+      ],
+      "competitorList": [],
+      "purchaseProbability": 60
+    },
+    "localOnly": {
+      "transcriptText": "customer: 家里两个小孩，周末还要带老人出去，所以想看 6 座或者 7 座 SUV。",
+      "ontologyCache": [
+        "第三排空间",
+        "用车成本",
+        "智能座舱",
+        "置换补贴",
+        "6/7 座",
+        "安全",
+        "舒适"
+      ],
+      "cardRescueEvents": [],
+      "salesActionLog": [
+        {
+          "agent": "ListenerAgent",
+          "summary": "识别意图：家庭出行"
+        },
+        {
+          "agent": "ProfileAgent",
+          "summary": "画像更新：张先生，购买概率 60%"
+        },
+        {
+          "agent": "RecommendationAgent",
+          "summary": "推荐 理想 L8 Pro"
+        },
+        {
+          "agent": "FollowupAgent",
+          "summary": "生成 中意向 回访策略"
+        }
+      ],
+      "vectorStatus": "mocked-for-demo"
+    },
+    "dmsArchive": {
+      "ai_summary": "家庭结构：两个小孩，周末会带老人出行；预算区间：待确认；重点关注：第三排空间、用车成本、智能座舱、置换补贴；已关注竞品：汉兰达、途昂",
+      "intent_tags": [
+        "家庭出行"
+      ],
+      "objection_tags": [
+        "用车成本顾虑"
+      ],
+      "competitor_list": [],
+      "purchase_probability": 60,
+      "next_followup_time": "3-5 天内",
+      "followup_script_draft": "张先生，您上次比较关注第三排和用车成本，我帮您把 L8 和汉兰达的核心差异整理好了，也可以顺便帮您测算旧车置换补贴。",
+      "report_pdf_url": "/reports/session-1776459300653.html"
+    },
+    "syncStatus": "PENDING",
+    "lastError": null,
+    "updatedAt": "2026-04-17T20:55:00.660Z"
+  },
+  {
+    "sessionId": "session-1776459325461",
+    "customerRef": "cust-zhang-001",
+    "aiProfile": {
+      "intentTags": [
+        "竞品对比"
+      ],
+      "preferenceTags": [
+        "空间",
+        "油耗",
+        "保值率"
+      ],
+      "objectionTags": [
+        "竞品比较",
+        "用车成本顾虑"
+      ],
+      "competitorList": [
+        "汉兰达"
+      ],
+      "purchaseProbability": 58
+    },
+    "localOnly": {
+      "transcriptText": "customer: 那理想 L8 比汉兰达贵在哪？",
+      "ontologyCache": [
+        "第三排空间",
+        "用车成本",
+        "智能座舱",
+        "置换补贴",
+        "空间",
+        "油耗",
+        "保值率"
+      ],
+      "cardRescueEvents": [
+        {
+          "type": "competitor_response",
+          "title": "理想 L8 vs 汉兰达",
+          "at": "2026-04-17T20:55:25.464Z"
+        }
+      ],
+      "salesActionLog": [
+        {
+          "agent": "ListenerAgent",
+          "summary": "识别意图：竞品对比"
+        },
+        {
+          "agent": "ProfileAgent",
+          "summary": "画像更新：张先生，购买概率 58%"
+        },
+        {
+          "agent": "RecommendationAgent",
+          "summary": "推荐 理想 L8 Pro"
+        },
+        {
+          "agent": "FollowupAgent",
+          "summary": "生成 中意向 回访策略"
+        }
+      ],
+      "vectorStatus": "mocked-for-demo"
+    },
+    "dmsArchive": {
+      "ai_summary": "家庭结构：待确认；预算区间：待确认；重点关注：第三排空间、用车成本、智能座舱、置换补贴；已关注竞品：汉兰达、途昂",
+      "intent_tags": [
+        "竞品对比"
+      ],
+      "objection_tags": [
+        "竞品比较",
+        "用车成本顾虑"
+      ],
+      "competitor_list": [
+        "汉兰达"
+      ],
+      "purchase_probability": 58,
+      "next_followup_time": "3-5 天内",
+      "followup_script_draft": "张先生，您上次比较关注第三排和用车成本，我帮您把 L8 和汉兰达的核心差异整理好了，也可以顺便帮您测算旧车置换补贴。",
+      "report_pdf_url": "/reports/session-1776459325461.html"
+    },
+    "syncStatus": "PENDING",
+    "lastError": null,
+    "updatedAt": "2026-04-17T20:55:25.464Z"
+  },
+  {
+    "sessionId": "session-1776501274947",
+    "customerRef": "cust-zhang-001",
+    "aiProfile": {
+      "intentTags": [
+        "家庭出行",
+        "成本关注",
+        "预算约束",
+        "竞品对比"
+      ],
+      "preferenceTags": [
+        "6/7 座",
+        "安全",
+        "舒适",
+        "能耗",
+        "保养",
+        "补贴",
+        "价格敏感",
+        "金融方案",
+        "空间",
+        "油耗",
+        "保值率"
+      ],
+      "objectionTags": [
+        "价格敏感",
+        "竞品比较",
+        "用车成本顾虑"
+      ],
+      "competitorList": [
+        "汉兰达"
+      ],
+      "purchaseProbability": 84
+    },
+    "localOnly": {
+      "transcriptText": "customer: 家里两个小孩，周末还要带老人出去，所以想看 6 座或者 7 座 SUV。\nsales: 您更看重空间、舒适性，还是后期用车成本？\ncustomer: 预算大概 25 到 30 万吧，主要别太费油。\ncustomer: 汉兰达我也看过，感觉还行，就是第三排一般。\ncustomer: 那理想 L8 比汉兰达贵在哪？",
+      "ontologyCache": [
+        "第三排空间",
+        "用车成本",
+        "智能座舱",
+        "置换补贴",
+        "6/7 座",
+        "安全",
+        "舒适",
+        "能耗",
+        "保养",
+        "补贴",
+        "价格敏感",
+        "金融方案",
+        "空间",
+        "油耗",
+        "保值率"
+      ],
+      "cardRescueEvents": [
+        {
+          "type": "competitor_response",
+          "title": "理想 L8 vs 汉兰达",
+          "at": "2026-04-18T08:35:17.061Z"
+        }
+      ],
+      "salesActionLog": [
+        {
+          "agent": "ListenerAgent",
+          "summary": "识别意图：竞品对比"
+        },
+        {
+          "agent": "ProfileAgent",
+          "summary": "画像更新：张先生，购买概率 84%"
+        },
+        {
+          "agent": "RecommendationAgent",
+          "summary": "推荐 理想 L8 Pro"
+        },
+        {
+          "agent": "FollowupAgent",
+          "summary": "生成 高意向 回访策略"
+        }
+      ],
+      "vectorStatus": "mocked-for-demo"
+    },
+    "dmsArchive": {
+      "ai_summary": "家庭结构：两个小孩，周末会带老人出行；预算区间：25-30 万；重点关注：第三排空间、用车成本、智能座舱、置换补贴；已关注竞品：汉兰达、途昂",
+      "intent_tags": [
+        "家庭出行",
+        "成本关注",
+        "预算约束",
+        "竞品对比"
+      ],
+      "objection_tags": [
+        "价格敏感",
+        "竞品比较",
+        "用车成本顾虑"
+      ],
+      "competitor_list": [
+        "汉兰达"
+      ],
+      "purchase_probability": 84,
+      "next_followup_time": "1-2 天内",
+      "followup_script_draft": "张先生，您上次比较关注第三排和用车成本，我帮您把 L8 和汉兰达的核心差异整理好了，也可以顺便帮您测算旧车置换补贴。",
+      "report_pdf_url": "/reports/session-1776501274947.html"
+    },
+    "syncStatus": "PENDING",
+    "lastError": null,
+    "updatedAt": "2026-04-18T08:35:17.061Z"
+  },
+  {
+    "sessionId": "session-1776514354003",
+    "customerRef": "cust-zhang-001",
+    "aiProfile": {
+      "intentTags": [
+        "家庭出行",
+        "成本关注",
+        "预算约束",
+        "竞品对比"
+      ],
+      "preferenceTags": [
+        "6/7 座",
+        "安全",
+        "舒适",
+        "能耗",
+        "保养",
+        "补贴",
+        "价格敏感",
+        "金融方案",
+        "空间",
+        "油耗",
+        "保值率"
+      ],
+      "objectionTags": [
+        "价格敏感",
+        "竞品比较",
+        "用车成本顾虑"
+      ],
+      "competitorList": [
+        "汉兰达"
+      ],
+      "purchaseProbability": 84
+    },
+    "localOnly": {
+      "transcriptText": "customer: 家里两个小孩，周末还要带老人出去，所以想看 6 座或者 7 座 SUV。\nsales: 您更看重空间、舒适性，还是后期用车成本？\ncustomer: 预算大概 25 到 30 万吧，主要别太费油。\ncustomer: 汉兰达我也看过，感觉还行，就是第三排一般。",
+      "ontologyCache": [
+        "第三排空间",
+        "用车成本",
+        "智能座舱",
+        "置换补贴",
+        "6/7 座",
+        "安全",
+        "舒适",
+        "能耗",
+        "保养",
+        "补贴",
+        "价格敏感",
+        "金融方案",
+        "空间",
+        "油耗",
+        "保值率"
+      ],
+      "cardRescueEvents": [
+        {
+          "type": "competitor_response",
+          "title": "理想 L8 vs 汉兰达",
+          "at": "2026-04-18T12:13:17.787Z"
+        }
+      ],
+      "salesActionLog": [
+        {
+          "agent": "ListenerAgent",
+          "summary": "识别意图：竞品对比"
+        },
+        {
+          "agent": "ProfileAgent",
+          "summary": "画像更新：张先生，购买概率 84%"
+        },
+        {
+          "agent": "RecommendationAgent",
+          "summary": "推荐 理想 L8 Pro"
+        },
+        {
+          "agent": "FollowupAgent",
+          "summary": "生成 高意向 回访策略"
+        }
+      ],
+      "vectorStatus": "mocked-for-demo"
+    },
+    "dmsArchive": {
+      "ai_summary": "家庭结构：两个小孩，周末会带老人出行；预算区间：25-30 万；重点关注：第三排空间、用车成本、智能座舱、置换补贴；已关注竞品：汉兰达、途昂",
+      "intent_tags": [
+        "家庭出行",
+        "成本关注",
+        "预算约束",
+        "竞品对比"
+      ],
+      "objection_tags": [
+        "价格敏感",
+        "竞品比较",
+        "用车成本顾虑"
+      ],
+      "competitor_list": [
+        "汉兰达"
+      ],
+      "purchase_probability": 84,
+      "next_followup_time": "1-2 天内",
+      "followup_script_draft": "张先生，您上次比较关注第三排和用车成本，我帮您把 L8 和汉兰达的核心差异整理好了，也可以顺便帮您测算旧车置换补贴。",
+      "report_pdf_url": "/reports/session-1776514354003.html"
+    },
+    "syncStatus": "SYNCED",
+    "lastError": null,
+    "updatedAt": "2026-04-18T12:13:17.787Z"
+  },
+  {
+    "sessionId": "session-1776678666379",
+    "customerRef": "cust-zhang-001",
+    "aiProfile": {
+      "intentTags": [
+        "家庭出行"
+      ],
+      "preferenceTags": [
+        "6/7 座",
+        "安全",
+        "舒适"
+      ],
+      "objectionTags": [
+        "用车成本顾虑"
+      ],
+      "competitorList": [],
+      "purchaseProbability": 60
+    },
+    "localOnly": {
+      "transcriptText": "customer: 家里两个小孩，周末还要带老人出去，所以想看 6 座或者 7 座 SUV。",
+      "ontologyCache": [
+        "第三排空间",
+        "用车成本",
+        "智能座舱",
+        "置换补贴",
+        "6/7 座",
+        "安全",
+        "舒适"
+      ],
+      "cardRescueEvents": [],
+      "salesActionLog": [
+        {
+          "agent": "ListenerAgent",
+          "summary": "识别意图：家庭出行"
+        },
+        {
+          "agent": "ProfileAgent",
+          "summary": "画像更新：张先生，购买概率 60%"
+        },
+        {
+          "agent": "RecommendationAgent",
+          "summary": "推荐 理想 L8 Pro"
+        },
+        {
+          "agent": "FollowupAgent",
+          "summary": "生成 中意向 回访策略"
+        }
+      ],
+      "vectorStatus": "mocked-for-demo"
+    },
+    "dmsArchive": {
+      "ai_summary": "家庭结构：两个小孩，周末会带老人出行；预算区间：待确认；重点关注：第三排空间、用车成本、智能座舱、置换补贴；已关注竞品：汉兰达、途昂",
+      "intent_tags": [
+        "家庭出行"
+      ],
+      "objection_tags": [
+        "用车成本顾虑"
+      ],
+      "competitor_list": [],
+      "purchase_probability": 60,
+      "next_followup_time": "3-5 天内",
+      "followup_script_draft": "张先生，您上次比较关注第三排和用车成本，我帮您把 L8 和汉兰达的核心差异整理好了，也可以顺便帮您测算旧车置换补贴。",
+      "report_pdf_url": "/reports/session-1776678666379.html"
+    },
+    "syncStatus": "PENDING",
+    "lastError": null,
+    "updatedAt": "2026-04-20T09:51:06.384Z"
+  },
+  {
+    "sessionId": "session-1776678731233",
+    "customerRef": "cust-zhang-001",
+    "aiProfile": {
+      "intentTags": [
+        "家庭出行"
+      ],
+      "preferenceTags": [
+        "6/7 座",
+        "安全",
+        "舒适"
+      ],
+      "objectionTags": [
+        "用车成本顾虑"
+      ],
+      "competitorList": [],
+      "purchaseProbability": 60
+    },
+    "localOnly": {
+      "transcriptText": "customer: 家里两个小孩，周末还要带老人出去，所以想看 6 座或者 7 座 SUV。",
+      "ontologyCache": [
+        "第三排空间",
+        "用车成本",
+        "智能座舱",
+        "置换补贴",
+        "6/7 座",
+        "安全",
+        "舒适"
+      ],
+      "cardRescueEvents": [],
+      "salesActionLog": [
+        {
+          "agent": "ListenerAgent",
+          "summary": "识别意图：家庭出行"
+        },
+        {
+          "agent": "ProfileAgent",
+          "summary": "画像更新：张先生，购买概率 60%"
+        },
+        {
+          "agent": "RecommendationAgent",
+          "summary": "推荐 理想 L8 Pro"
+        },
+        {
+          "agent": "FollowupAgent",
+          "summary": "生成 中意向 回访策略"
+        }
+      ],
+      "vectorStatus": "mocked-for-demo"
+    },
+    "dmsArchive": {
+      "ai_summary": "家庭结构：两个小孩，周末会带老人出行；预算区间：待确认；重点关注：第三排空间、用车成本、智能座舱、置换补贴；已关注竞品：汉兰达、途昂",
+      "intent_tags": [
+        "家庭出行"
+      ],
+      "objection_tags": [
+        "用车成本顾虑"
+      ],
+      "competitor_list": [],
+      "purchase_probability": 60,
+      "next_followup_time": "3-5 天内",
+      "followup_script_draft": "张先生，您上次比较关注第三排和用车成本，我帮您把 L8 和汉兰达的核心差异整理好了，也可以顺便帮您测算旧车置换补贴。",
+      "report_pdf_url": "/reports/session-1776678731233.html"
+    },
+    "syncStatus": "PENDING",
+    "lastError": null,
+    "updatedAt": "2026-04-20T09:52:11.237Z"
+  },
+  {
+    "sessionId": "session-1776680603502",
+    "customerRef": "cust-zhang-001",
+    "aiProfile": {
+      "intentTags": [
+        "家庭出行",
+        "预算约束"
+      ],
+      "preferenceTags": [
+        "6/7 座",
+        "安全",
+        "舒适",
+        "价格敏感",
+        "金融方案"
+      ],
+      "objectionTags": [
+        "价格敏感",
+        "用车成本顾虑"
+      ],
+      "competitorList": [],
+      "purchaseProbability": 74
+    },
+    "localOnly": {
+      "transcriptText": "customer: 嗯你好我想要这个买车\ncustomer: 就是我最近在看这个有和车相关的一些内容\ncustomer: 呃就是这个我家有两个小孩想看看SUV预算大概是三十万左右\ncustomer: 那么\ncustomer: 家里两个小孩，周末还要带老人出去，所以想看 6 座或者 7 座 SUV。\ncustomer: 明天什么时候带家人出行吗",
+      "ontologyCache": [
+        "第三排空间",
+        "用车成本",
+        "智能座舱",
+        "置换补贴",
+        "6/7 座",
+        "安全",
+        "舒适",
+        "价格敏感",
+        "金融方案"
+      ],
+      "cardRescueEvents": [],
+      "salesActionLog": [
+        {
+          "agent": "ListenerAgent",
+          "summary": "识别意图：待观察"
+        },
+        {
+          "agent": "ProfileAgent",
+          "summary": "画像更新：张先生，购买概率 74%"
+        },
+        {
+          "agent": "RecommendationAgent",
+          "summary": "推荐 理想 L8 Pro"
+        },
+        {
+          "agent": "FollowupAgent",
+          "summary": "生成 中意向 回访策略"
+        }
+      ],
+      "vectorStatus": "mocked-for-demo"
+    },
+    "dmsArchive": {
+      "ai_summary": "家庭结构：两个小孩，周末会带老人出行；预算区间：待确认；重点关注：第三排空间、用车成本、智能座舱、置换补贴；已关注竞品：汉兰达、途昂",
+      "intent_tags": [
+        "家庭出行",
+        "预算约束"
+      ],
+      "objection_tags": [
+        "价格敏感",
+        "用车成本顾虑"
+      ],
+      "competitor_list": [],
+      "purchase_probability": 74,
+      "next_followup_time": "3-5 天内",
+      "followup_script_draft": "张先生，您上次比较关注第三排和用车成本，我帮您把 L8 和汉兰达的核心差异整理好了，也可以顺便帮您测算旧车置换补贴。",
+      "report_pdf_url": "/reports/session-1776680603502.html"
+    },
+    "syncStatus": "PENDING",
+    "lastError": null,
+    "updatedAt": "2026-04-20T10:25:49.120Z"
+  },
+  {
+    "sessionId": "session-1776680766278",
+    "customerRef": "cust-zhang-001",
+    "aiProfile": {
+      "intentTags": [
+        "家庭出行",
+        "成本关注",
+        "预算约束"
+      ],
+      "preferenceTags": [
+        "6/7 座",
+        "安全",
+        "舒适",
+        "能耗",
+        "保养",
+        "补贴",
+        "价格敏感",
+        "金融方案"
+      ],
+      "objectionTags": [
+        "价格敏感",
+        "用车成本顾虑"
+      ],
+      "competitorList": [],
+      "purchaseProbability": 74
+    },
+    "localOnly": {
+      "transcriptText": "customer: 这个您好我想来看看车嗯那么我主要是这个家里有两个小孩这个\ncustomer: 嗯想看看SUV之类的车有什么推荐吗\ncustomer: 呃我想知道这个\ncustomer: 家里两个小孩，周末还要带老人出去，所以想看 6 座或者 7 座 SUV。\nsales: 您更看重空间、舒适性，还是后期用车成本？\ncustomer: 预算大概 25 到 30 万吧，主要别太费油。\ncustomer: 准备太费油了",
+      "ontologyCache": [
+        "第三排空间",
+        "用车成本",
+        "智能座舱",
+        "置换补贴",
+        "6/7 座",
+        "安全",
+        "舒适",
+        "能耗",
+        "保养",
+        "补贴",
+        "价格敏感",
+        "金融方案"
+      ],
+      "cardRescueEvents": [],
+      "salesActionLog": [
+        {
+          "agent": "ListenerAgent",
+          "summary": "识别意图：成本关注"
+        },
+        {
+          "agent": "ProfileAgent",
+          "summary": "画像更新：张先生，购买概率 74%"
+        },
+        {
+          "agent": "RecommendationAgent",
+          "summary": "推荐 理想 L8 Pro"
+        },
+        {
+          "agent": "FollowupAgent",
+          "summary": "生成 中意向 回访策略"
+        }
+      ],
+      "vectorStatus": "mocked-for-demo"
+    },
+    "dmsArchive": {
+      "ai_summary": "家庭结构：两个小孩，周末会带老人出行；预算区间：25-30 万；重点关注：第三排空间、用车成本、智能座舱、置换补贴；已关注竞品：汉兰达、途昂",
+      "intent_tags": [
+        "家庭出行",
+        "成本关注",
+        "预算约束"
+      ],
+      "objection_tags": [
+        "价格敏感",
+        "用车成本顾虑"
+      ],
+      "competitor_list": [],
+      "purchase_probability": 74,
+      "next_followup_time": "3-5 天内",
+      "followup_script_draft": "张先生，您上次比较关注第三排和用车成本，我帮您把 L8 和汉兰达的核心差异整理好了，也可以顺便帮您测算旧车置换补贴。",
+      "report_pdf_url": "/reports/session-1776680766278.html"
+    },
+    "syncStatus": "PENDING",
+    "lastError": null,
+    "updatedAt": "2026-04-20T10:27:36.158Z"
+  },
+  {
+    "sessionId": "session-1776680862158",
+    "customerRef": "cust-zhang-001",
+    "aiProfile": {
+      "intentTags": [
+        "家庭出行",
+        "成本关注"
+      ],
+      "preferenceTags": [
+        "6/7 座",
+        "安全",
+        "舒适",
+        "能耗",
+        "保养",
+        "补贴"
+      ],
+      "objectionTags": [
+        "用车成本顾虑"
+      ],
+      "competitorList": [],
+      "purchaseProbability": 60
+    },
+    "localOnly": {
+      "transcriptText": "customer: 家里两个小孩，周末还要带老人出去，所以想看 6 座或者 7 座 SUV。\nsales: 您更看重空间、舒适性，还是后期用车成本？",
+      "ontologyCache": [
+        "第三排空间",
+        "用车成本",
+        "智能座舱",
+        "置换补贴",
+        "6/7 座",
+        "安全",
+        "舒适",
+        "能耗",
+        "保养",
+        "补贴"
+      ],
+      "cardRescueEvents": [],
+      "salesActionLog": [
+        {
+          "agent": "ListenerAgent",
+          "summary": "识别意图：成本关注"
+        },
+        {
+          "agent": "ProfileAgent",
+          "summary": "画像更新：张先生，购买概率 60%"
+        },
+        {
+          "agent": "RecommendationAgent",
+          "summary": "推荐 理想 L8 Pro"
+        },
+        {
+          "agent": "FollowupAgent",
+          "summary": "生成 中意向 回访策略"
+        }
+      ],
+      "vectorStatus": "mocked-for-demo"
+    },
+    "dmsArchive": {
+      "ai_summary": "家庭结构：两个小孩，周末会带老人出行；预算区间：待确认；重点关注：第三排空间、用车成本、智能座舱、置换补贴；已关注竞品：汉兰达、途昂",
+      "intent_tags": [
+        "家庭出行",
+        "成本关注"
+      ],
+      "objection_tags": [
+        "用车成本顾虑"
+      ],
+      "competitor_list": [],
+      "purchase_probability": 60,
+      "next_followup_time": "3-5 天内",
+      "followup_script_draft": "张先生，您上次比较关注第三排和用车成本，我帮您把 L8 和汉兰达的核心差异整理好了，也可以顺便帮您测算旧车置换补贴。",
+      "report_pdf_url": "/reports/session-1776680862158.html"
+    },
+    "syncStatus": "PENDING",
+    "lastError": null,
+    "updatedAt": "2026-04-20T10:27:59.090Z"
+  },
+  {
+    "sessionId": "session-1776680883999",
+    "customerRef": "cust-zhang-001",
+    "aiProfile": {
+      "intentTags": [],
+      "preferenceTags": [],
+      "objectionTags": [
+        "用车成本顾虑"
+      ],
+      "competitorList": [],
+      "purchaseProbability": 48
+    },
+    "localOnly": {
+      "transcriptText": "customer: 你好",
+      "ontologyCache": [
+        "第三排空间",
+        "用车成本",
+        "智能座舱",
+        "置换补贴"
+      ],
+      "cardRescueEvents": [],
+      "salesActionLog": [
+        {
+          "agent": "ListenerAgent",
+          "summary": "识别意图：待观察"
+        },
+        {
+          "agent": "ProfileAgent",
+          "summary": "画像更新：张先生，购买概率 48%"
+        },
+        {
+          "agent": "RecommendationAgent",
+          "summary": "推荐 理想 L8 Pro"
+        },
+        {
+          "agent": "FollowupAgent",
+          "summary": "生成 待培育 回访策略"
+        }
+      ],
+      "vectorStatus": "mocked-for-demo"
+    },
+    "dmsArchive": {
+      "ai_summary": "家庭结构：待确认；预算区间：待确认；重点关注：第三排空间、用车成本、智能座舱、置换补贴；已关注竞品：汉兰达、途昂",
+      "intent_tags": [],
+      "objection_tags": [
+        "用车成本顾虑"
+      ],
+      "competitor_list": [],
+      "purchase_probability": 48,
+      "next_followup_time": "3-5 天内",
+      "followup_script_draft": "张先生，您上次比较关注第三排和用车成本，我帮您把 L8 和汉兰达的核心差异整理好了，也可以顺便帮您测算旧车置换补贴。",
+      "report_pdf_url": "/reports/session-1776680883999.html"
+    },
+    "syncStatus": "PENDING",
+    "lastError": null,
+    "updatedAt": "2026-04-20T10:28:10.928Z"
+  },
+  {
+    "sessionId": "session-1776680904524",
+    "customerRef": "cust-zhang-001",
+    "aiProfile": {
+      "intentTags": [],
+      "preferenceTags": [],
+      "objectionTags": [
+        "用车成本顾虑"
+      ],
+      "competitorList": [],
+      "purchaseProbability": 48
+    },
+    "localOnly": {
+      "transcriptText": "customer: 你好，我主要想看看车，然后我的旧车是这个2018款日产轩逸。\ncustomer: 主要目前想换一个大一点的车。\ncustomer: 呃。\ncustomer: 呃。\ncustomer: 对，主要还是用来这个日常通勤吧，就是还是在这个室内进行，就是去跑。\ncustomer: 呃。然后我大概每天上班儿都会用到这个车然后频率还是挺高的。",
+      "ontologyCache": [
+        "第三排空间",
+        "用车成本",
+        "智能座舱",
+        "置换补贴"
+      ],
+      "cardRescueEvents": [],
+      "salesActionLog": [
+        {
+          "agent": "ListenerAgent",
+          "summary": "识别意图：待观察"
+        },
+        {
+          "agent": "ProfileAgent",
+          "summary": "画像更新：张先生，购买概率 48%"
+        },
+        {
+          "agent": "RecommendationAgent",
+          "summary": "推荐 理想 L8 Pro"
+        },
+        {
+          "agent": "FollowupAgent",
+          "summary": "生成 待培育 回访策略"
+        }
+      ],
+      "vectorStatus": "mocked-for-demo"
+    },
+    "dmsArchive": {
+      "ai_summary": "家庭结构：待确认；预算区间：待确认；重点关注：第三排空间、用车成本、智能座舱、置换补贴；已关注竞品：汉兰达、途昂",
+      "intent_tags": [],
+      "objection_tags": [
+        "用车成本顾虑"
+      ],
+      "competitor_list": [],
+      "purchase_probability": 48,
+      "next_followup_time": "3-5 天内",
+      "followup_script_draft": "张先生，您上次比较关注第三排和用车成本，我帮您把 L8 和汉兰达的核心差异整理好了，也可以顺便帮您测算旧车置换补贴。",
+      "report_pdf_url": "/reports/session-1776680904524.html"
+    },
+    "syncStatus": "PENDING",
+    "lastError": null,
+    "updatedAt": "2026-04-20T10:30:11.905Z"
+  },
+  {
+    "sessionId": "session-1776681384094",
+    "customerRef": "cust-zhang-001",
+    "aiProfile": {
+      "intentTags": [
+        "预算约束",
+        "家庭出行"
+      ],
+      "preferenceTags": [
+        "价格敏感",
+        "金融方案",
+        "6/7 座",
+        "安全",
+        "舒适"
+      ],
+      "objectionTags": [
+        "价格敏感",
+        "用车成本顾虑"
+      ],
+      "competitorList": [],
+      "purchaseProbability": 74
+    },
+    "localOnly": {
+      "transcriptText": "customer: 嗯，你好你好。\ncustomer: 我想要SUV。\ncustomer: 呃，这个我的预算是在这个45左右万左右。\ncustomer: 也因为我想接送小孩儿就更方便一些，然后平时主要就是用这个车来上下班儿。请问你有什么推荐？\nsales: [STALL] 销售顾问卡壳，需要一句救场提示\nsales: [STALL] 销售顾问卡壳，需要一句救场提示\nsales: 那那么请问您这个平时这个第三排使用频率呢？家庭人数是如何的？\nsales: 呃，那么我，我跟您推荐这个理想L8 Pro啊，不知道您这边有没有所了解呢？",
+      "ontologyCache": [
+        "第三排空间",
+        "用车成本",
+        "智能座舱",
+        "置换补贴",
+        "价格敏感",
+        "金融方案",
+        "6/7 座",
+        "安全",
+        "舒适"
+      ],
+      "cardRescueEvents": [],
+      "salesActionLog": [
+        {
+          "agent": "ListenerAgent",
+          "summary": "识别意图：待观察"
+        },
+        {
+          "agent": "ProfileAgent",
+          "summary": "画像更新：张先生，购买概率 74%"
+        },
+        {
+          "agent": "RecommendationAgent",
+          "summary": "推荐 理想 L8 Pro"
+        },
+        {
+          "agent": "FollowupAgent",
+          "summary": "生成 中意向 回访策略"
+        }
+      ],
+      "vectorStatus": "mocked-for-demo"
+    },
+    "dmsArchive": {
+      "ai_summary": "家庭结构：两个小孩，周末会带老人出行；预算区间：待确认；重点关注：第三排空间、用车成本、智能座舱、置换补贴；已关注竞品：汉兰达、途昂",
+      "intent_tags": [
+        "预算约束",
+        "家庭出行"
+      ],
+      "objection_tags": [
+        "价格敏感",
+        "用车成本顾虑"
+      ],
+      "competitor_list": [],
+      "purchase_probability": 74,
+      "next_followup_time": "3-5 天内",
+      "followup_script_draft": "张先生，您上次比较关注第三排和用车成本，我帮您把 L8 和汉兰达的核心差异整理好了，也可以顺便帮您测算旧车置换补贴。",
+      "report_pdf_url": "/reports/session-1776681384094.html"
+    },
+    "syncStatus": "PENDING",
+    "lastError": null,
+    "updatedAt": "2026-04-20T10:38:45.715Z"
+  },
+  {
+    "sessionId": "session-1776681551909",
+    "customerRef": "cust-zhang-001",
+    "aiProfile": {
+      "intentTags": [
+        "预算约束"
+      ],
+      "preferenceTags": [
+        "价格敏感",
+        "金融方案"
+      ],
+      "objectionTags": [
+        "价格敏感",
+        "用车成本顾虑"
+      ],
+      "competitorList": [],
+      "purchaseProbability": 62
+    },
+    "localOnly": {
+      "transcriptText": "customer: Jake你好，我这个我的旧车是这个2018款日产轩逸我想要这个。\nsales: 呃，那个张先生您好哦，这个请问一下这个您您的需求是什么呢？\nsales: [STALL] 销售顾问卡壳，需要一句救场提示\nsales: 嗯，这个。这个。\nsales: 啊，那请问您家里有几口人呢？\ncustomer: 哦，我家里我家里有五口人，但是平时就是这个我和我老婆还有我三个孩子。\ncustomer: 我可能想买一个这个。\ncustomer: 我可能想买一个这个大一点的车。\ncustomer: 平。\ncustomer: 直接送老婆上下班。\ncustomer: 接送孩子上下学。\nsales: [STALL] 销售顾问卡壳，需要一句救场提示\nsales: 那么您家里平时有多少个人出行啊？\nsales: 是谁开车呢？\ncustomer: 啊，平时煮，平时煮。\ncustomer: 平时主要是我开车。\nsales: 您了解第三排吗？\ncustomer: 呃，这个我也不太了解请问您这边儿有什么推荐呢？\nsales: 为什么我这边给您推荐啊？这个理想理想L8 Pro不知道您有所了解吗？\ncustomer: 哦，理想L8 Pro啊，其实我不是很喜欢这个牌子。\ncustomer: 这个牌，这个品牌，这个评价不是很好。\ncustomer: 我的预算大概是45万左右你有什么推荐吗？",
+      "ontologyCache": [
+        "第三排空间",
+        "用车成本",
+        "智能座舱",
+        "置换补贴",
+        "价格敏感",
+        "金融方案"
+      ],
+      "cardRescueEvents": [],
+      "salesActionLog": [
+        {
+          "agent": "ListenerAgent",
+          "summary": "识别意图：预算约束"
+        },
+        {
+          "agent": "ProfileAgent",
+          "summary": "画像更新：张先生，购买概率 62%"
+        },
+        {
+          "agent": "RecommendationAgent",
+          "summary": "推荐 理想 L8 Pro"
+        },
+        {
+          "agent": "FollowupAgent",
+          "summary": "生成 中意向 回访策略"
+        }
+      ],
+      "vectorStatus": "mocked-for-demo"
+    },
+    "dmsArchive": {
+      "ai_summary": "家庭结构：待确认；预算区间：待确认；重点关注：第三排空间、用车成本、智能座舱、置换补贴；已关注竞品：汉兰达、途昂",
+      "intent_tags": [
+        "预算约束"
+      ],
+      "objection_tags": [
+        "价格敏感",
+        "用车成本顾虑"
+      ],
+      "competitor_list": [],
+      "purchase_probability": 62,
+      "next_followup_time": "3-5 天内",
+      "followup_script_draft": "张先生，您上次比较关注第三排和用车成本，我帮您把 L8 和汉兰达的核心差异整理好了，也可以顺便帮您测算旧车置换补贴。",
+      "report_pdf_url": "/reports/session-1776681551909.html"
+    },
+    "syncStatus": "PENDING",
+    "lastError": null,
+    "updatedAt": "2026-04-20T10:44:34.720Z"
+  },
+  {
+    "sessionId": "session-1776681949854",
+    "customerRef": "cust-zhang-001",
+    "aiProfile": {
+      "intentTags": [
+        "家庭出行"
+      ],
+      "preferenceTags": [
+        "6/7 座",
+        "安全",
+        "舒适"
+      ],
+      "objectionTags": [
+        "用车成本顾虑"
+      ],
+      "competitorList": [],
+      "purchaseProbability": 60
+    },
+    "localOnly": {
+      "transcriptText": "customer: 家里两个小孩，周末还要带老人出去，所以想看 6 座或者 7 座 SUV。",
+      "ontologyCache": [
+        "第三排空间",
+        "用车成本",
+        "智能座舱",
+        "置换补贴",
+        "6/7 座",
+        "安全",
+        "舒适"
+      ],
+      "cardRescueEvents": [],
+      "salesActionLog": [
+        {
+          "agent": "ListenerAgent",
+          "summary": "识别意图：家庭出行"
+        },
+        {
+          "agent": "ProfileAgent",
+          "summary": "画像更新：张先生，购买概率 60%"
+        },
+        {
+          "agent": "RecommendationAgent",
+          "summary": "推荐 理想 L8 Pro"
+        },
+        {
+          "agent": "FollowupAgent",
+          "summary": "生成 中意向 回访策略"
+        }
+      ],
+      "vectorStatus": "mocked-for-demo"
+    },
+    "dmsArchive": {
+      "ai_summary": "家庭结构：两个小孩，周末会带老人出行；预算区间：待确认；重点关注：第三排空间、用车成本、智能座舱、置换补贴；已关注竞品：汉兰达、途昂",
+      "intent_tags": [
+        "家庭出行"
+      ],
+      "objection_tags": [
+        "用车成本顾虑"
+      ],
+      "competitor_list": [],
+      "purchase_probability": 60,
+      "next_followup_time": "3-5 天内",
+      "followup_script_draft": "张先生，您上次比较关注第三排和用车成本，我帮您把 L8 和汉兰达的核心差异整理好了，也可以顺便帮您测算旧车置换补贴。",
+      "report_pdf_url": "/reports/session-1776681949854.html"
+    },
+    "syncStatus": "PENDING",
+    "lastError": null,
+    "updatedAt": "2026-04-20T10:45:49.857Z"
+  },
+  {
+    "sessionId": "session-1776681983738",
+    "customerRef": "cust-zhang-001",
+    "aiProfile": {
+      "intentTags": [],
+      "preferenceTags": [],
+      "objectionTags": [
+        "用车成本顾虑"
+      ],
+      "competitorList": [],
+      "purchaseProbability": 48
+    },
+    "localOnly": {
+      "transcriptText": "sales: [STALL] sales stuck",
+      "ontologyCache": [
+        "第三排空间",
+        "用车成本",
+        "智能座舱",
+        "置换补贴"
+      ],
+      "cardRescueEvents": [],
+      "salesActionLog": [
+        {
+          "agent": "ListenerAgent",
+          "summary": "识别意图：待观察"
+        },
+        {
+          "agent": "ProfileAgent",
+          "summary": "画像更新：张先生，购买概率 48%"
+        },
+        {
+          "agent": "RecommendationAgent",
+          "summary": "推荐 理想 L8 Pro"
+        },
+        {
+          "agent": "FollowupAgent",
+          "summary": "生成 待培育 回访策略"
+        }
+      ],
+      "vectorStatus": "mocked-for-demo"
+    },
+    "dmsArchive": {
+      "ai_summary": "家庭结构：待确认；预算区间：待确认；重点关注：第三排空间、用车成本、智能座舱、置换补贴；已关注竞品：汉兰达、途昂",
+      "intent_tags": [],
+      "objection_tags": [
+        "用车成本顾虑"
+      ],
+      "competitor_list": [],
+      "purchase_probability": 48,
+      "next_followup_time": "3-5 天内",
+      "followup_script_draft": "张先生，您上次比较关注第三排和用车成本，我帮您把 L8 和汉兰达的核心差异整理好了，也可以顺便帮您测算旧车置换补贴。",
+      "report_pdf_url": "/reports/session-1776681983738.html"
+    },
+    "syncStatus": "PENDING",
+    "lastError": null,
+    "updatedAt": "2026-04-20T10:46:23.818Z"
+  },
+  {
+    "sessionId": "session-1776682044851",
+    "customerRef": "cust-zhang-001",
+    "aiProfile": {
+      "intentTags": [
+        "家庭出行"
+      ],
+      "preferenceTags": [
+        "6/7 座",
+        "安全",
+        "舒适"
+      ],
+      "objectionTags": [
+        "用车成本顾虑"
+      ],
+      "competitorList": [],
+      "purchaseProbability": 60
+    },
+    "localOnly": {
+      "transcriptText": "customer: 家里两个小孩，周末还要带老人出去，所以想看 6 座或者 7 座 SUV。",
+      "ontologyCache": [
+        "第三排空间",
+        "用车成本",
+        "智能座舱",
+        "置换补贴",
+        "6/7 座",
+        "安全",
+        "舒适"
+      ],
+      "cardRescueEvents": [],
+      "salesActionLog": [
+        {
+          "agent": "ListenerAgent",
+          "summary": "识别意图：家庭出行"
+        },
+        {
+          "agent": "ProfileAgent",
+          "summary": "画像更新：张先生，购买概率 60%"
+        },
+        {
+          "agent": "RecommendationAgent",
+          "summary": "推荐 理想 L8 Pro"
+        },
+        {
+          "agent": "FollowupAgent",
+          "summary": "生成 中意向 回访策略"
+        }
+      ],
+      "vectorStatus": "mocked-for-demo"
+    },
+    "dmsArchive": {
+      "ai_summary": "家庭结构：两个小孩，周末会带老人出行；预算区间：待确认；重点关注：第三排空间、用车成本、智能座舱、置换补贴；已关注竞品：汉兰达、途昂",
+      "intent_tags": [
+        "家庭出行"
+      ],
+      "objection_tags": [
+        "用车成本顾虑"
+      ],
+      "competitor_list": [],
+      "purchase_probability": 60,
+      "next_followup_time": "3-5 天内",
+      "followup_script_draft": "张先生，您上次比较关注第三排和用车成本，我帮您把 L8 和汉兰达的核心差异整理好了，也可以顺便帮您测算旧车置换补贴。",
+      "report_pdf_url": "/reports/session-1776682044851.html"
+    },
+    "syncStatus": "PENDING",
+    "lastError": null,
+    "updatedAt": "2026-04-20T10:47:24.856Z"
+  },
+  {
+    "sessionId": "session-1776682527437",
+    "customerRef": "cust-zhang-001",
+    "aiProfile": {
+      "intentTags": [
+        "预算约束"
+      ],
+      "preferenceTags": [
+        "价格敏感",
+        "金融方案"
+      ],
+      "objectionTags": [
+        "价格敏感",
+        "用车成本顾虑"
+      ],
+      "competitorList": [],
+      "purchaseProbability": 62
+    },
+    "localOnly": {
+      "transcriptText": "customer: 你好你好你好你好。\ncustomer: 我这个，呃，你给我有什么推荐呀？我这个我想要个大点儿的车，然后。\ncustomer: 嗯。\nsales: 你好，先生。\nsales: 咱这边有什么样的需求呢？\nsales: [STALL] 销售顾问卡壳，需要一句救场提示\nsales: [STALL] 销售顾问卡壳，需要一句救场提示\nsales: 呃，就是说咱们这边呢？呃，请问您大概的预算是多少呢？\ncustomer: 哦，我大概这不是预算是四十万吧。\ncustomer: 呃，我的这个大概就是，呃，在市内跑。\nsales: [STALL] 销售顾问卡壳，需要一句救场提示\nsales: 就是。\nsales: 不好用啊，咱咱这边儿推荐一个这个。",
+      "ontologyCache": [
+        "第三排空间",
+        "用车成本",
+        "智能座舱",
+        "置换补贴",
+        "价格敏感",
+        "金融方案"
+      ],
+      "cardRescueEvents": [],
+      "salesActionLog": [
+        {
+          "agent": "ListenerAgent",
+          "summary": "识别意图：待观察"
+        },
+        {
+          "agent": "ProfileAgent",
+          "summary": "画像更新：张先生，购买概率 62%"
+        },
+        {
+          "agent": "RecommendationAgent",
+          "summary": "推荐 理想 L8 Pro"
+        },
+        {
+          "agent": "FollowupAgent",
+          "summary": "生成 中意向 回访策略"
+        }
+      ],
+      "vectorStatus": "mocked-for-demo"
+    },
+    "dmsArchive": {
+      "ai_summary": "家庭结构：待确认；预算区间：待确认；重点关注：第三排空间、用车成本、智能座舱、置换补贴；已关注竞品：汉兰达、途昂",
+      "intent_tags": [
+        "预算约束"
+      ],
+      "objection_tags": [
+        "价格敏感",
+        "用车成本顾虑"
+      ],
+      "competitor_list": [],
+      "purchase_probability": 62,
+      "next_followup_time": "3-5 天内",
+      "followup_script_draft": "张先生，您上次比较关注第三排和用车成本，我帮您把 L8 和汉兰达的核心差异整理好了，也可以顺便帮您测算旧车置换补贴。",
+      "report_pdf_url": "/reports/session-1776682527437.html"
+    },
+    "syncStatus": "PENDING",
+    "lastError": null,
+    "updatedAt": "2026-04-20T10:57:42.244Z"
+  },
+  {
+    "sessionId": "session-1776682780449",
+    "customerRef": "cust-zhang-001",
+    "aiProfile": {
+      "intentTags": [
+        "家庭出行"
+      ],
+      "preferenceTags": [
+        "6/7 座",
+        "安全",
+        "舒适"
+      ],
+      "objectionTags": [
+        "用车成本顾虑"
+      ],
+      "competitorList": [],
+      "purchaseProbability": 60
+    },
+    "localOnly": {
+      "transcriptText": "customer: 家里两个小孩，周末还要带老人出去，所以想看 6 座或者 7 座 SUV。",
+      "ontologyCache": [
+        "第三排空间",
+        "用车成本",
+        "智能座舱",
+        "置换补贴",
+        "6/7 座",
+        "安全",
+        "舒适"
+      ],
+      "cardRescueEvents": [],
+      "salesActionLog": [
+        {
+          "agent": "ListenerAgent",
+          "summary": "识别意图：家庭出行"
+        },
+        {
+          "agent": "ProfileAgent",
+          "summary": "画像更新：张先生，购买概率 60%"
+        },
+        {
+          "agent": "RecommendationAgent",
+          "summary": "推荐 理想 L8 Pro"
+        },
+        {
+          "agent": "FollowupAgent",
+          "summary": "生成 中意向 回访策略"
+        }
+      ],
+      "vectorStatus": "mocked-for-demo"
+    },
+    "dmsArchive": {
+      "ai_summary": "家庭结构：两个小孩，周末会带老人出行；预算区间：待确认；重点关注：第三排空间、用车成本、智能座舱、置换补贴；已关注竞品：汉兰达、途昂",
+      "intent_tags": [
+        "家庭出行"
+      ],
+      "objection_tags": [
+        "用车成本顾虑"
+      ],
+      "competitor_list": [],
+      "purchase_probability": 60,
+      "next_followup_time": "3-5 天内",
+      "followup_script_draft": "张先生，您上次比较关注第三排和用车成本，我帮您把 L8 和汉兰达的核心差异整理好了，也可以顺便帮您测算旧车置换补贴。",
+      "report_pdf_url": "/reports/session-1776682780449.html"
+    },
+    "syncStatus": "PENDING",
+    "lastError": null,
+    "updatedAt": "2026-04-20T10:59:40.453Z"
+  },
+  {
+    "sessionId": "session-1776687362731",
+    "customerRef": "cust-zhang-001",
+    "aiProfile": {
+      "intentTags": [
+        "家庭出行",
+        "成本关注",
+        "预算约束",
+        "竞品对比"
+      ],
+      "preferenceTags": [
+        "6/7 座",
+        "安全",
+        "舒适",
+        "能耗",
+        "保养",
+        "补贴",
+        "价格敏感",
+        "金融方案",
+        "空间",
+        "油耗",
+        "保值率"
+      ],
+      "objectionTags": [
+        "价格敏感",
+        "用车成本顾虑"
+      ],
+      "competitorList": [
+        "汉兰达"
+      ],
+      "purchaseProbability": 84
+    },
+    "localOnly": {
+      "transcriptText": "customer: 家里两个小孩，周末还要带老人出去，所以想看 6 座或者 7 座 SUV。\nsales: 您更看重空间、舒适性，还是后期用车成本？\ncustomer: 预算大概 25 到 30 万吧，主要别太费油。\ncustomer: 汉兰达我也看过，感觉还行，就是第三排一般。\ncustomer: 那理想 L8 比汉兰达贵在哪？\nsales: [STALL] 销售顾问卡壳，需要一句救场提示\nsales: [STALL] 销售顾问卡壳，需要一句救场提示\nsales: [STALL] 销售顾问卡壳，需要一句救场提示\nsales: [STALL] 销售顾问卡壳，需要一句救场提示\nsales: [STALL] 销售顾问卡壳，需要一句救场提示",
+      "ontologyCache": [
+        "第三排空间",
+        "用车成本",
+        "智能座舱",
+        "置换补贴",
+        "6/7 座",
+        "安全",
+        "舒适",
+        "能耗",
+        "保养",
+        "补贴",
+        "价格敏感",
+        "金融方案",
+        "空间",
+        "油耗",
+        "保值率"
+      ],
+      "cardRescueEvents": [],
+      "salesActionLog": [
+        {
+          "agent": "ListenerAgent",
+          "summary": "识别意图：待观察"
+        },
+        {
+          "agent": "ProfileAgent",
+          "summary": "画像更新：张先生，购买概率 84%"
+        },
+        {
+          "agent": "RecommendationAgent",
+          "summary": "推荐 理想 L8 Pro"
+        },
+        {
+          "agent": "FollowupAgent",
+          "summary": "生成 高意向 回访策略"
+        }
+      ],
+      "vectorStatus": "mocked-for-demo"
+    },
+    "dmsArchive": {
+      "ai_summary": "家庭结构：两个小孩，周末会带老人出行；预算区间：25-30 万；重点关注：第三排空间、用车成本、智能座舱、置换补贴；已关注竞品：汉兰达、途昂",
+      "intent_tags": [
+        "家庭出行",
+        "成本关注",
+        "预算约束",
+        "竞品对比"
+      ],
+      "objection_tags": [
+        "价格敏感",
+        "用车成本顾虑"
+      ],
+      "competitor_list": [
+        "汉兰达"
+      ],
+      "purchase_probability": 84,
+      "next_followup_time": "1-2 天内",
+      "followup_script_draft": "张先生，您上次比较关注第三排和用车成本，我帮您把 L8 和汉兰达的核心差异整理好了，也可以顺便帮您测算旧车置换补贴。",
+      "report_pdf_url": "/reports/session-1776687362731.html"
+    },
+    "syncStatus": "PENDING",
+    "lastError": null,
+    "updatedAt": "2026-04-20T12:16:21.468Z"
+  },
+  {
+    "sessionId": "session-1776688111122",
+    "customerRef": "cust-zhang-001",
+    "aiProfile": {
+      "intentTags": [
+        "预算约束"
+      ],
+      "preferenceTags": [
+        "价格敏感",
+        "金融方案"
+      ],
+      "objectionTags": [
+        "价格敏感",
+        "用车成本顾虑"
+      ],
+      "competitorList": [],
+      "purchaseProbability": 62
+    },
+    "localOnly": {
+      "transcriptText": "customer: 呃那个你好我想买一个这个SUV因为家里有两个孩子\ncustomer: 我的预算是三十万左右",
+      "ontologyCache": [
+        "第三排空间",
+        "用车成本",
+        "智能座舱",
+        "置换补贴",
+        "价格敏感",
+        "金融方案"
+      ],
+      "cardRescueEvents": [],
+      "salesActionLog": [
+        {
+          "agent": "ListenerAgent",
+          "summary": "识别意图：预算约束"
+        },
+        {
+          "agent": "ProfileAgent",
+          "summary": "画像更新：张先生，购买概率 62%"
+        },
+        {
+          "agent": "RecommendationAgent",
+          "summary": "推荐 理想 L8 Pro"
+        },
+        {
+          "agent": "FollowupAgent",
+          "summary": "生成 中意向 回访策略"
+        }
+      ],
+      "vectorStatus": "mocked-for-demo"
+    },
+    "dmsArchive": {
+      "ai_summary": "家庭结构：待确认；预算区间：待确认；重点关注：第三排空间、用车成本、智能座舱、置换补贴；已关注竞品：汉兰达、途昂",
+      "intent_tags": [
+        "预算约束"
+      ],
+      "objection_tags": [
+        "价格敏感",
+        "用车成本顾虑"
+      ],
+      "competitor_list": [],
+      "purchase_probability": 62,
+      "next_followup_time": "3-5 天内",
+      "followup_script_draft": "张先生，您上次比较关注第三排和用车成本，我帮您把 L8 和汉兰达的核心差异整理好了，也可以顺便帮您测算旧车置换补贴。",
+      "report_pdf_url": "/reports/session-1776688111122.html"
+    },
+    "syncStatus": "PENDING",
+    "lastError": null,
+    "updatedAt": "2026-04-20T12:34:35.599Z"
+  },
+  {
+    "sessionId": "session-1776688608201",
+    "customerRef": "cust-zhang-001",
+    "aiProfile": {
+      "intentTags": [],
+      "preferenceTags": [],
+      "objectionTags": [
+        "用车成本顾虑"
+      ],
+      "competitorList": [],
+      "purchaseProbability": 48
+    },
+    "localOnly": {
+      "transcriptText": "customer: 你好你好我想要一辆SUV\nsales: [STALL] 销售顾问卡壳，需要一句救场提示",
+      "ontologyCache": [
+        "第三排空间",
+        "用车成本",
+        "智能座舱",
+        "置换补贴"
+      ],
+      "cardRescueEvents": [],
+      "salesActionLog": [
+        {
+          "agent": "ListenerAgent",
+          "summary": "识别意图：待观察"
+        },
+        {
+          "agent": "ProfileAgent",
+          "summary": "画像更新：张先生，购买概率 48%"
+        },
+        {
+          "agent": "RecommendationAgent",
+          "summary": "推荐 理想 L8 Pro"
+        },
+        {
+          "agent": "FollowupAgent",
+          "summary": "生成 待培育 回访策略"
+        }
+      ],
+      "vectorStatus": "mocked-for-demo"
+    },
+    "dmsArchive": {
+      "ai_summary": "家庭结构：待确认；预算区间：待确认；重点关注：第三排空间、用车成本、智能座舱、置换补贴；已关注竞品：汉兰达、途昂",
+      "intent_tags": [],
+      "objection_tags": [
+        "用车成本顾虑"
+      ],
+      "competitor_list": [],
+      "purchase_probability": 48,
+      "next_followup_time": "3-5 天内",
+      "followup_script_draft": "张先生，您上次比较关注第三排和用车成本，我帮您把 L8 和汉兰达的核心差异整理好了，也可以顺便帮您测算旧车置换补贴。",
+      "report_pdf_url": "/reports/session-1776688608201.html"
+    },
+    "syncStatus": "PENDING",
+    "lastError": null,
+    "updatedAt": "2026-04-20T12:37:08.195Z"
+  },
+  {
+    "sessionId": "session-1776688659675",
+    "customerRef": "cust-zhang-001",
+    "aiProfile": {
+      "intentTags": [
+        "预算约束"
+      ],
+      "preferenceTags": [
+        "价格敏感",
+        "金融方案"
+      ],
+      "objectionTags": [
+        "价格敏感",
+        "用车成本顾虑"
+      ],
+      "competitorList": [],
+      "purchaseProbability": 62
+    },
+    "localOnly": {
+      "transcriptText": "customer: 你好你好\ncustomer: 我想要一个s u v\ncustomer: 孩子预算是三十万",
+      "ontologyCache": [
+        "第三排空间",
+        "用车成本",
+        "智能座舱",
+        "置换补贴",
+        "价格敏感",
+        "金融方案"
+      ],
+      "cardRescueEvents": [],
+      "salesActionLog": [
+        {
+          "agent": "ListenerAgent",
+          "summary": "识别意图：预算约束"
+        },
+        {
+          "agent": "ProfileAgent",
+          "summary": "画像更新：张先生，购买概率 62%"
+        },
+        {
+          "agent": "RecommendationAgent",
+          "summary": "推荐 理想 L8 Pro"
+        },
+        {
+          "agent": "FollowupAgent",
+          "summary": "生成 中意向 回访策略"
+        }
+      ],
+      "vectorStatus": "mocked-for-demo"
+    },
+    "dmsArchive": {
+      "ai_summary": "家庭结构：待确认；预算区间：待确认；重点关注：第三排空间、用车成本、智能座舱、置换补贴；已关注竞品：汉兰达、途昂",
+      "intent_tags": [
+        "预算约束"
+      ],
+      "objection_tags": [
+        "价格敏感",
+        "用车成本顾虑"
+      ],
+      "competitor_list": [],
+      "purchase_probability": 62,
+      "next_followup_time": "3-5 天内",
+      "followup_script_draft": "张先生，您上次比较关注第三排和用车成本，我帮您把 L8 和汉兰达的核心差异整理好了，也可以顺便帮您测算旧车置换补贴。",
+      "report_pdf_url": "/reports/session-1776688659675.html"
+    },
+    "syncStatus": "PENDING",
+    "lastError": null,
+    "updatedAt": "2026-04-20T12:38:06.152Z"
+  },
+  {
+    "sessionId": "session-1776689318523",
+    "customerRef": "cust-zhang-001",
+    "aiProfile": {
+      "intentTags": [
+        "家庭出行"
+      ],
+      "preferenceTags": [
+        "6/7 座",
+        "安全",
+        "舒适"
+      ],
+      "objectionTags": [
+        "用车成本顾虑"
+      ],
+      "competitorList": [],
+      "purchaseProbability": 60
+    },
+    "localOnly": {
+      "transcriptText": "customer: 家里两个小孩，周末还要带老人出去，所以想看 6 座或者 7 座 SUV。",
+      "ontologyCache": [
+        "第三排空间",
+        "用车成本",
+        "智能座舱",
+        "置换补贴",
+        "6/7 座",
+        "安全",
+        "舒适"
+      ],
+      "cardRescueEvents": [],
+      "salesActionLog": [
+        {
+          "agent": "ListenerAgent",
+          "summary": "识别意图：家庭出行"
+        },
+        {
+          "agent": "ProfileAgent",
+          "summary": "画像更新：张先生，购买概率 60%"
+        },
+        {
+          "agent": "RecommendationAgent",
+          "summary": "推荐 理想 L8 Pro"
+        },
+        {
+          "agent": "FollowupAgent",
+          "summary": "生成 中意向 回访策略"
+        }
+      ],
+      "vectorStatus": "mocked-for-demo"
+    },
+    "dmsArchive": {
+      "ai_summary": "家庭结构：两个小孩，周末会带老人出行；预算区间：待确认；重点关注：第三排空间、用车成本、智能座舱、置换补贴；已关注竞品：汉兰达、途昂",
+      "intent_tags": [
+        "家庭出行"
+      ],
+      "objection_tags": [
+        "用车成本顾虑"
+      ],
+      "competitor_list": [],
+      "purchase_probability": 60,
+      "next_followup_time": "3-5 天内",
+      "followup_script_draft": "张先生，您上次比较关注第三排和用车成本，我帮您把 L8 和汉兰达的核心差异整理好了，也可以顺便帮您测算旧车置换补贴。",
+      "report_pdf_url": "/reports/session-1776689318523.html"
+    },
+    "syncStatus": "PENDING",
+    "lastError": null,
+    "updatedAt": "2026-04-20T12:48:48.451Z"
+  },
+  {
+    "sessionId": "session-1776771767445",
+    "customerRef": "cust-zhang-001",
+    "aiProfile": {
+      "intentTags": [
+        "家庭出行"
+      ],
+      "preferenceTags": [
+        "6/7 座",
+        "安全",
+        "舒适"
+      ],
+      "objectionTags": [
+        "用车成本顾虑"
+      ],
+      "competitorList": [],
+      "purchaseProbability": 60
+    },
+    "localOnly": {
+      "transcriptText": "customer: 呃你好\ncustomer: 我想要那个啥\ncustomer: 那个我想买车家里有小孩\nsales: [STALL] 销售顾问卡壳，需要一句救场提示",
+      "ontologyCache": [
+        "第三排空间",
+        "用车成本",
+        "智能座舱",
+        "置换补贴",
+        "6/7 座",
+        "安全",
+        "舒适"
+      ],
+      "cardRescueEvents": [],
+      "salesActionLog": [
+        {
+          "agent": "ListenerAgent",
+          "summary": "识别意图：待观察"
+        },
+        {
+          "agent": "ProfileAgent",
+          "summary": "画像更新：张先生，购买概率 60%"
+        },
+        {
+          "agent": "RecommendationAgent",
+          "summary": "推荐 理想 L8 Pro"
+        },
+        {
+          "agent": "FollowupAgent",
+          "summary": "生成 中意向 回访策略"
+        }
+      ],
+      "vectorStatus": "mocked-for-demo"
+    },
+    "dmsArchive": {
+      "ai_summary": "家庭结构：两个小孩，周末会带老人出行；预算区间：待确认；重点关注：第三排空间、用车成本、智能座舱、置换补贴；已关注竞品：汉兰达、途昂",
+      "intent_tags": [
+        "家庭出行"
+      ],
+      "objection_tags": [
+        "用车成本顾虑"
+      ],
+      "competitor_list": [],
+      "purchase_probability": 60,
+      "next_followup_time": "3-5 天内",
+      "followup_script_draft": "张先生，您上次比较关注第三排和用车成本，我帮您把 L8 和汉兰达的核心差异整理好了，也可以顺便帮您测算旧车置换补贴。",
+      "report_pdf_url": "/reports/session-1776771767445.html"
+    },
+    "syncStatus": "PENDING",
+    "lastError": null,
+    "updatedAt": "2026-04-21T11:47:47.970Z"
+  },
+  {
+    "sessionId": "session-1776772681934",
+    "customerRef": "cust-zhang-001",
+    "aiProfile": {
+      "intentTags": [
+        "家庭出行",
+        "预算约束"
+      ],
+      "preferenceTags": [
+        "6/7 座",
+        "安全",
+        "舒适",
+        "价格敏感",
+        "金融方案"
+      ],
+      "objectionTags": [
+        "价格敏感",
+        "用车成本顾虑"
+      ],
+      "competitorList": [],
+      "purchaseProbability": 74
+    },
+    "localOnly": {
+      "transcriptText": "customer: 喂你好我家有两个小孩给我推荐一下车吧\nsales: [STALL] 销售顾问卡壳，需要一句救场提示\nsales: 好的先生这里为你\ncustomer: 你好我想要买一辆车这个这个目前家里有两个孩子啊然后这个嗯周末会带老人出行我的旧车是2018款日产轩逸请问你有什么推荐吗\nsales: 您好请稍等一下\nsales: [STALL] 销售顾问卡壳，需要一句救场提示\nsales: 那么您最关注的是这个你目前的这个需求价位是多少呢\ncustomer: 我目前这个预算是30万左右",
+      "ontologyCache": [
+        "第三排空间",
+        "用车成本",
+        "智能座舱",
+        "置换补贴",
+        "6/7 座",
+        "安全",
+        "舒适",
+        "价格敏感",
+        "金融方案"
+      ],
+      "cardRescueEvents": [],
+      "salesActionLog": [
+        {
+          "agent": "ListenerAgent",
+          "summary": "识别意图：预算约束"
+        },
+        {
+          "agent": "ProfileAgent",
+          "summary": "画像更新：张先生，购买概率 74%"
+        },
+        {
+          "agent": "RecommendationAgent",
+          "summary": "推荐 理想 L8 Pro"
+        },
+        {
+          "agent": "FollowupAgent",
+          "summary": "生成 中意向 回访策略"
+        }
+      ],
+      "vectorStatus": "mocked-for-demo"
+    },
+    "dmsArchive": {
+      "ai_summary": "家庭结构：两个小孩，周末会带老人出行；预算区间：待确认；重点关注：第三排空间、用车成本、智能座舱、置换补贴；已关注竞品：汉兰达、途昂",
+      "intent_tags": [
+        "家庭出行",
+        "预算约束"
+      ],
+      "objection_tags": [
+        "价格敏感",
+        "用车成本顾虑"
+      ],
+      "competitor_list": [],
+      "purchase_probability": 74,
+      "next_followup_time": "3-5 天内",
+      "followup_script_draft": "张先生，您上次比较关注第三排和用车成本，我帮您把 L8 和汉兰达的核心差异整理好了，也可以顺便帮您测算旧车置换补贴。",
+      "report_pdf_url": "/reports/session-1776772681934.html"
+    },
+    "syncStatus": "SYNCED",
+    "lastError": null,
+    "updatedAt": "2026-04-21T12:07:18.572Z"
+  }
+]

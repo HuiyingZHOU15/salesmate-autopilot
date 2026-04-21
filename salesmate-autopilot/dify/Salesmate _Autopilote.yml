@@ -1,0 +1,2363 @@
+app:
+  description: ''
+  icon: 🤖
+  icon_background: '#FFEAD5'
+  icon_type: emoji
+  mode: advanced-chat
+  name: Salesmate _Autopilote
+  use_icon_as_answer_icon: false
+dependencies:
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: langgenius/ollama:0.1.3@66e156c4f612964c131c49168882e78c2cdfe366879506b97ad855b23c5d6d98
+    version: null
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: langgenius/tongyi:0.1.36@73e3e28eca163b96da65ef9eab8633f9e7257213ff0d2f2bed93b28b552d2cda
+    version: null
+kind: app
+version: 0.6.0
+workflow:
+  conversation_variables:
+  - description: '销售查询
+
+      '
+    id: c84233d0-9c0b-4871-a619-3840bad7036b
+    name: question
+    selector:
+    - conversation
+    - question
+    value: ''
+    value_type: string
+  - description: 当前阶段：init / profiling / recommend / closing / departure
+    id: salesmate-stage
+    name: stage
+    selector:
+    - conversation
+    - stage
+    value: init
+    value_type: string
+  - description: 客户意图
+    id: salesmate-customer-intent
+    name: customer_intent
+    selector:
+    - conversation
+    - customer_intent
+    value: ''''' '''''
+    value_type: string
+  - description: 客户预算，单位万元
+    id: salesmate-customer-budget
+    name: customer_budget
+    selector:
+    - conversation
+    - customer_budget
+    value: 0
+    value_type: integer
+  - description: 竞品列表
+    id: salesmate-customer-competitors
+    name: customer_competitors
+    selector:
+    - conversation
+    - customer_competitors
+    value: ''
+    value_type: string
+  - description: 额外上下文
+    id: salesmate-extra-context
+    name: extra_context
+    selector:
+    - conversation
+    - extra_context
+    value: ''
+    value_type: string
+  - description: 需求完整度，0-100
+    id: salesmate-profile-completeness
+    name: profile_completeness
+    selector:
+    - conversation
+    - profile_completeness
+    value: 0
+    value_type: integer
+  - description: 完整客户画像，reasoning_agent 输出
+    id: salesmate-full-profile
+    name: full_profile
+    selector:
+    - conversation
+    - full_profile
+    value: {}
+    value_type: object
+  - description: 推荐结果，recommendation_agent 输出
+    id: salesmate-recommendation-result
+    name: recommendation_result
+    selector:
+    - conversation
+    - recommendation_result
+    value: {}
+    value_type: object
+  - description: 卡壳提示，listener_agent 输出
+    id: salesmate-stall-hint
+    name: stall_hint
+    selector:
+    - conversation
+    - stall_hint
+    value: ''
+    value_type: string
+  - description: 离店归档摘要，memory_agent 输出
+    id: salesmate-summary
+    name: summary
+    selector:
+    - conversation
+    - summary
+    value: ''
+    value_type: string
+  environment_variables: []
+  features:
+    file_upload:
+      allowed_file_extensions:
+      - .JPG
+      - .JPEG
+      - .PNG
+      - .GIF
+      - .WEBP
+      - .SVG
+      allowed_file_types:
+      - image
+      allowed_file_upload_methods:
+      - local_file
+      - remote_url
+      enabled: false
+      fileUploadConfig:
+        attachment_image_file_size_limit: 2
+        audio_file_size_limit: 50
+        batch_count_limit: 5
+        file_size_limit: 15
+        file_upload_limit: 20
+        image_file_batch_limit: 10
+        image_file_size_limit: 10
+        single_chunk_attachment_limit: 10
+        video_file_size_limit: 100
+        workflow_file_upload_limit: 10
+      image:
+        enabled: false
+        number_limits: 3
+        transfer_methods:
+        - local_file
+        - remote_url
+      number_limits: 3
+    opening_statement: ''
+    retriever_resource:
+      enabled: true
+    sensitive_word_avoidance:
+      enabled: false
+    speech_to_text:
+      enabled: false
+    suggested_questions: []
+    suggested_questions_after_answer:
+      enabled: false
+    text_to_speech:
+      enabled: false
+      language: ''
+      voice: ''
+  graph:
+    edges:
+    - data:
+        isInLoop: false
+        sourceType: start
+        targetType: if-else
+      id: 1776640658463-source-1776640724797-target
+      selected: false
+      source: '1776640658463'
+      sourceHandle: source
+      target: '1776640724797'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: if-else
+        targetType: tool
+      id: 1776640724797-d3f3ad46-ccda-4e52-a151-c3d4d7ebdd1d-1776640814461-target
+      selected: false
+      source: '1776640724797'
+      sourceHandle: d3f3ad46-ccda-4e52-a151-c3d4d7ebdd1d
+      target: '1776640814461'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: tool
+        targetType: assigner
+      id: 1776640768757-source-1776641009742-target
+      selected: false
+      source: '1776640768757'
+      sourceHandle: source
+      target: '1776641009742'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: assigner
+        targetType: answer
+      id: 1776641009742-source-1776641013757-target
+      selected: false
+      source: '1776641009742'
+      sourceHandle: source
+      target: '1776641013757'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: if-else
+        targetType: knowledge-retrieval
+      id: 1776640724797-52ad9ae4-6e1f-491d-80e6-d9d6c3fada2b-1776641154966-target
+      selected: false
+      source: '1776640724797'
+      sourceHandle: 52ad9ae4-6e1f-491d-80e6-d9d6c3fada2b
+      target: '1776641154966'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: tool
+        targetType: assigner
+      id: 1776640814461-source-1776641251629-target
+      selected: false
+      source: '1776640814461'
+      sourceHandle: source
+      target: '1776641251629'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: assigner
+        targetType: answer
+      id: 1776641251629-source-1776641257590-target
+      selected: false
+      source: '1776641251629'
+      sourceHandle: source
+      target: '1776641257590'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: if-else
+        targetType: llm
+      id: 1776640902733-true-1776670451375-target
+      selected: false
+      source: '1776640902733'
+      sourceHandle: 'true'
+      target: '1776670451375'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: answer
+      id: 1776670451375-source-1776673660872-target
+      selected: false
+      source: '1776670451375'
+      sourceHandle: source
+      target: '1776673660872'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: if-else
+        targetType: answer
+      id: 1776640902733-false-1776641106789-target
+      selected: false
+      source: '1776640902733'
+      sourceHandle: 'false'
+      target: '1776641106789'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: assigner
+        targetType: if-else
+      id: 1776684851768-source-1776640902733-target
+      selected: false
+      source: '1776684851768'
+      sourceHandle: source
+      target: '1776640902733'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: if-else
+        targetType: tool
+      id: 1776640724797-true-1776640750462-target
+      selected: false
+      source: '1776640724797'
+      sourceHandle: 'true'
+      target: '1776640750462'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: knowledge-retrieval
+        targetType: tool
+      id: 1776641154966-source-1776640780997-target
+      selected: false
+      source: '1776641154966'
+      sourceHandle: source
+      target: '1776640780997'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: answer
+      id: 1776763149963-source-answer-target
+      selected: false
+      source: '1776763149963'
+      sourceHandle: source
+      target: answer
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: knowledge-retrieval
+        targetType: code
+      id: 1776763013236-source-1776765141364-target
+      selected: false
+      source: '1776763013236'
+      sourceHandle: source
+      target: '1776765141364'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: llm
+      id: 1776765141364-source-1776763149963-target
+      selected: false
+      source: '1776765141364'
+      sourceHandle: source
+      target: '1776763149963'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: if-else
+        targetType: llm
+      id: 1776640724797-false-1776765262045-target
+      selected: false
+      source: '1776640724797'
+      sourceHandle: 'false'
+      target: '1776765262045'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: knowledge-retrieval
+      id: 1776765262045-source-1776763013236-target
+      selected: false
+      source: '1776765262045'
+      sourceHandle: source
+      target: '1776763013236'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: if-else
+        targetType: tool
+      id: 1776640724797-6a99ddb1-3cb6-4425-b862-481db59ccc62-1776640768757-target
+      selected: false
+      source: '1776640724797'
+      sourceHandle: 6a99ddb1-3cb6-4425-b862-481db59ccc62
+      target: '1776640768757'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: tool
+        targetType: code
+      id: 1776640780997-source-1776765899932-target
+      selected: false
+      source: '1776640780997'
+      sourceHandle: source
+      target: '1776765899932'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: llm
+      id: 1776765899932-source-1776766190005-target
+      selected: false
+      source: '1776765899932'
+      sourceHandle: source
+      target: '1776766190005'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: answer
+        targetType: knowledge-retrieval
+      id: 1776641013757-source-1776641154966-target
+      selected: false
+      source: '1776641013757'
+      sourceHandle: source
+      target: '1776641154966'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: answer
+        targetType: tool
+      id: 1776641106789-source-1776640768757-target
+      selected: false
+      source: '1776641106789'
+      sourceHandle: source
+      target: '1776640768757'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: assigner
+      id: 1776766190005-source-1776767840324-target
+      selected: false
+      source: '1776766190005'
+      sourceHandle: source
+      target: '1776767840324'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: assigner
+        targetType: answer
+      id: 1776767840324-source-1776641191733-target
+      selected: false
+      source: '1776767840324'
+      sourceHandle: source
+      target: '1776641191733'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: if-else
+        targetType: llm
+      id: 1776640724797-016183d1-6c6c-4d52-9f89-f830e4e0c7b5-1776770383004-target
+      selected: false
+      source: '1776640724797'
+      sourceHandle: 016183d1-6c6c-4d52-9f89-f830e4e0c7b5
+      target: '1776770383004'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: assigner
+        targetType: llm
+      id: 1776767840324-source-1776770383004-target
+      selected: false
+      source: '1776767840324'
+      sourceHandle: source
+      target: '1776770383004'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: tool
+      id: 1776770383004-source-1776640814461-target
+      selected: false
+      source: '1776770383004'
+      sourceHandle: source
+      target: '1776640814461'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: tool
+        targetType: assigner
+      id: 1776640750462-source-1776684851768-target
+      selected: false
+      source: '1776640750462'
+      sourceHandle: source
+      target: '1776684851768'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    nodes:
+    - data:
+        selected: false
+        title: 用户输入
+        type: start
+        variables:
+        - default: ''
+          hint: ''
+          label: query
+          options: []
+          placeholder: 最新一句客户/销售话语
+          required: true
+          type: paragraph
+          variable: query
+        - default: ''
+          hint: ''
+          label: dialogue_history
+          options: []
+          placeholder: 完整或最近若干轮对话文本
+          required: false
+          type: paragraph
+          variable: dialogue_history
+        - default: ''
+          hint: ''
+          label: summary
+          options: []
+          placeholder: 此前对话摘要
+          required: false
+          type: paragraph
+          variable: summary
+        - default: '{}'
+          hint: ''
+          label: full_profile
+          options: []
+          placeholder: 当前客户画像 JSON 字符串
+          required: false
+          type: paragraph
+          variable: full_profile
+        - default: init
+          hint: ''
+          label: sales_stage
+          options: []
+          placeholder: init / profiling / recommendation / closing / departure
+          required: false
+          type: text-input
+          variable: sales_stage
+        - default: ''
+          hint: ''
+          label: session_id
+          options: []
+          placeholder: 接待会话 ID
+          required: false
+          type: text-input
+          variable: session_id
+        - default: ''
+          hint: ''
+          label: customer_id
+          options: []
+          placeholder: DMS 客户 ID
+          required: false
+          type: text-input
+          variable: customer_id
+        - default: realtime
+          hint: ''
+          label: trigger
+          options: []
+          placeholder: realtime / stall / archive / followup
+          required: false
+          type: text-input
+          variable: trigger
+        - default: customer
+          hint: ''
+          label: current_utterance_speaker
+          options: []
+          placeholder: customer / sales
+          required: false
+          type: text-input
+          variable: current_utterance_speaker
+        - default: ''
+          hint: ''
+          label: manual_competitor
+          options: []
+          placeholder: 手动补充竞品，如 汉兰达
+          required: false
+          type: text-input
+          variable: manual_competitor
+        - default: ''
+          hint: ''
+          label: selected_model
+          options: []
+          placeholder: 当前推荐车型
+          required: false
+          type: text-input
+          variable: selected_model
+        - default: '0'
+          hint: ''
+          label: purchase_probability
+          options: []
+          placeholder: 已有购买概率 0-100
+          required: false
+          type: number
+          variable: purchase_probability
+        - default: ''
+          hint: ''
+          label: followup_script
+          options: []
+          placeholder: 已有回访话术草稿
+          required: false
+          type: paragraph
+          variable: followup_script
+        - default: ''
+          hint: ''
+          label: report_url
+          options: []
+          placeholder: 已生成报告链接
+          required: false
+          type: text-input
+          variable: report_url
+        - default: mock
+          hint: ''
+          label: asr_mode
+          options: []
+          placeholder: mock / whisper / cloud
+          required: false
+          type: text-input
+          variable: asr_mode
+        - default: ollama
+          hint: ''
+          label: llm_provider
+          options: []
+          placeholder: ollama / dify-cloud / openai-compatible
+          required: false
+          type: text-input
+          variable: llm_provider
+        - default: mock
+          hint: ''
+          label: dms_sync_mode
+          options: []
+          placeholder: mock / api / offline
+          required: false
+          type: text-input
+          variable: dms_sync_mode
+        - default: '{}'
+          hint: ''
+          label: ontology_schema
+          options: []
+          placeholder: 本体标签体系 JSON 字符串
+          required: false
+          type: paragraph
+          variable: ontology_schema
+        - default: '[]'
+          hint: ''
+          label: known_models
+          options: []
+          placeholder: 本品牌车型清单 JSON 数组字符串
+          required: false
+          type: paragraph
+          variable: known_models
+        - default: '[]'
+          hint: ''
+          label: known_competitors
+          options: []
+          placeholder: 竞品车型清单 JSON 数组字符串
+          required: false
+          type: paragraph
+          variable: known_competitors
+        - default: '[]'
+          hint: ''
+          label: search_scope
+          options: []
+          placeholder: 知识库检索范围 JSON 数组字符串
+          required: false
+          type: paragraph
+          variable: search_scope
+        - default: '{}'
+          hint: ''
+          label: scoring_rules
+          options: []
+          placeholder: 购买概率评分规则 JSON 字符串
+          required: false
+          type: paragraph
+          variable: scoring_rules
+      height: 657
+      id: '1776640658463'
+      position:
+        x: -489.45827783186957
+        y: -96.31789736074211
+      positionAbsolute:
+        x: -489.45827783186957
+        y: -96.31789736074211
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        answer: '{{#1776763149963.text#}}'
+        selected: false
+        title: 直接回复
+        type: answer
+        variables: []
+      height: 105
+      id: answer
+      position:
+        x: 1243.9881018536953
+        y: 974.5530939904967
+      positionAbsolute:
+        x: 1243.9881018536953
+        y: 974.5530939904967
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        cases:
+        - case_id: 'true'
+          conditions:
+          - comparison_operator: contains
+            id: c218ddd2-4e1f-4daf-a9f5-64e6fd939ab0
+            value: init
+            varType: string
+            variable_selector:
+            - '1776640658463'
+            - sales_stage
+          id: 'true'
+          logical_operator: and
+        - case_id: 6a99ddb1-3cb6-4425-b862-481db59ccc62
+          conditions:
+          - comparison_operator: contains
+            id: salesmate-stage-profiling
+            value: profiling
+            varType: string
+            variable_selector:
+            - '1776640658463'
+            - sales_stage
+          id: 6a99ddb1-3cb6-4425-b862-481db59ccc62
+          logical_operator: and
+        - case_id: 52ad9ae4-6e1f-491d-80e6-d9d6c3fada2b
+          conditions:
+          - comparison_operator: contains
+            id: salesmate-stage-recommend
+            value: recommendation
+            varType: string
+            variable_selector:
+            - '1776640658463'
+            - sales_stage
+          id: 52ad9ae4-6e1f-491d-80e6-d9d6c3fada2b
+          logical_operator: and
+        - case_id: 016183d1-6c6c-4d52-9f89-f830e4e0c7b5
+          conditions:
+          - comparison_operator: contains
+            id: salesmate-stage-closing
+            value: closing
+            varType: string
+            variable_selector:
+            - '1776640658463'
+            - sales_stage
+          id: 016183d1-6c6c-4d52-9f89-f830e4e0c7b5
+          logical_operator: and
+        - case_id: d3f3ad46-ccda-4e52-a151-c3d4d7ebdd1d
+          conditions:
+          - comparison_operator: contains
+            id: salesmate-stage-departure
+            value: departure
+            varType: string
+            variable_selector:
+            - '1776640658463'
+            - sales_stage
+          id: d3f3ad46-ccda-4e52-a151-c3d4d7ebdd1d
+          logical_operator: and
+        selected: false
+        title: 主工作流阶段分支
+        type: if-else
+      height: 438
+      id: '1776640724797'
+      position:
+        x: 231.81559761198355
+        y: 56.36000581436136
+      positionAbsolute:
+        x: 231.81559761198355
+        y: 56.36000581436136
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        is_team_authorization: true
+        paramSchemas:
+        - auto_generate: null
+          default: ''''' '''''
+          form: llm
+          human_description:
+            en_US: ''
+            ja_JP: ''
+            pt_BR: ''
+            zh_Hans: ''
+          label:
+            en_US: query
+            ja_JP: query
+            pt_BR: query
+            zh_Hans: query
+          llm_description: ''
+          max: null
+          min: null
+          name: query
+          options: []
+          placeholder:
+            en_US: ''
+            ja_JP: ''
+            pt_BR: ''
+            zh_Hans: ''
+          precision: null
+          required: true
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: ‘’ ‘’
+          form: llm
+          human_description:
+            en_US: ''
+            ja_JP: ''
+            pt_BR: ''
+            zh_Hans: ''
+          label:
+            en_US: customer_intent
+            ja_JP: customer_intent
+            pt_BR: customer_intent
+            zh_Hans: customer_intent
+          llm_description: ''
+          max: null
+          min: null
+          name: customer_intent
+          options: []
+          placeholder:
+            en_US: ''
+            ja_JP: ''
+            pt_BR: ''
+            zh_Hans: ''
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: '0'
+          form: llm
+          human_description:
+            en_US: ''
+            ja_JP: ''
+            pt_BR: ''
+            zh_Hans: ''
+          label:
+            en_US: customer_budget
+            ja_JP: customer_budget
+            pt_BR: customer_budget
+            zh_Hans: customer_budget
+          llm_description: ''
+          max: null
+          min: null
+          name: customer_budget
+          options: []
+          placeholder:
+            en_US: ''
+            ja_JP: ''
+            pt_BR: ''
+            zh_Hans: ''
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: number
+        - auto_generate: null
+          default: '[ ]'
+          form: llm
+          human_description:
+            en_US: ''
+            ja_JP: ''
+            pt_BR: ''
+            zh_Hans: ''
+          label:
+            en_US: customer_competitors
+            ja_JP: customer_competitors
+            pt_BR: customer_competitors
+            zh_Hans: customer_competitors
+          llm_description: ''
+          max: null
+          min: null
+          name: customer_competitors
+          options: []
+          placeholder:
+            en_US: ''
+            ja_JP: ''
+            pt_BR: ''
+            zh_Hans: ''
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: '0'
+          form: llm
+          human_description:
+            en_US: ''
+            ja_JP: ''
+            pt_BR: ''
+            zh_Hans: ''
+          label:
+            en_US: profile_completeness
+            ja_JP: profile_completeness
+            pt_BR: profile_completeness
+            zh_Hans: profile_completeness
+          llm_description: ''
+          max: null
+          min: null
+          name: profile_comleteness
+          options: []
+          placeholder:
+            en_US: ''
+            ja_JP: ''
+            pt_BR: ''
+            zh_Hans: ''
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: number
+        - auto_generate: null
+          default: ’‘null’‘
+          form: llm
+          human_description:
+            en_US: ''
+            ja_JP: ''
+            pt_BR: ''
+            zh_Hans: ''
+          label:
+            en_US: stall_hint
+            ja_JP: stall_hint
+            pt_BR: stall_hint
+            zh_Hans: stall_hint
+          llm_description: ''
+          max: null
+          min: null
+          name: stall_hint
+          options: []
+          placeholder:
+            en_US: ''
+            ja_JP: ''
+            pt_BR: ''
+            zh_Hans: ''
+          precision: null
+          required: true
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: ''''' '''''
+          form: llm
+          human_description:
+            en_US: ''
+            ja_JP: ''
+            pt_BR: ''
+            zh_Hans: ''
+          label:
+            en_US: extra_context
+            ja_JP: extra_context
+            pt_BR: extra_context
+            zh_Hans: extra_context
+          llm_description: ''
+          max: null
+          min: null
+          name: extra_context
+          options: []
+          placeholder:
+            en_US: ''
+            ja_JP: ''
+            pt_BR: ''
+            zh_Hans: ''
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: string
+        params:
+          customer_budget: ''
+          customer_competitors: ''
+          customer_intent: ''
+          extra_context: ''
+          profile_comleteness: ''
+          query: ''
+          stall_hint: ''
+        plugin_id: null
+        plugin_unique_identifier: null
+        provider_icon:
+          background: '#FFEAD5'
+          content: 🤖
+        provider_id: 7dff7683-a64b-4a78-9897-028564ea6fc4
+        provider_name: listener_agent
+        provider_type: workflow
+        selected: false
+        title: listener_agent
+        tool_configurations:
+          query:
+            type: mixed
+            value: '{{#1776640658463.query#}}'
+        tool_description: 分析销售对话，提取客户意图、预算、竞品，计算需求完整度，检测卡壳信号
+        tool_label: listener_agent
+        tool_name: listener_agent
+        tool_node_version: '2'
+        tool_parameters:
+          customer_budget:
+            type: constant
+            value: 0
+          customer_competitors:
+            type: mixed
+            value: '{{#conversation.customer_competitors#}}'
+          customer_intent:
+            type: mixed
+            value: '{{#conversation.customer_intent#}}'
+          extra_context:
+            type: mixed
+            value: '{{#conversation.extra_context#}}'
+          profile_comleteness:
+            type: constant
+            value: '0'
+          query:
+            type: mixed
+            value: '{{#1776640658463.query#}}'
+          stall_hint:
+            type: mixed
+            value: '{{#conversation.stall_hint#}}'
+        type: tool
+      height: 90
+      id: '1776640750462'
+      position:
+        x: 197.64976436699902
+        y: -202.94661295097868
+      positionAbsolute:
+        x: 197.64976436699902
+        y: -202.94661295097868
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        is_team_authorization: true
+        paramSchemas:
+        - auto_generate: null
+          default: ’‘ ’‘
+          form: llm
+          human_description:
+            en_US: ''
+            ja_JP: ''
+            pt_BR: ''
+            zh_Hans: ''
+          label:
+            en_US: intent
+            ja_JP: intent
+            pt_BR: intent
+            zh_Hans: intent
+          llm_description: ''
+          max: null
+          min: null
+          name: intent
+          options: []
+          placeholder:
+            en_US: ''
+            ja_JP: ''
+            pt_BR: ''
+            zh_Hans: ''
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: '0'
+          form: llm
+          human_description:
+            en_US: ''
+            ja_JP: ''
+            pt_BR: ''
+            zh_Hans: ''
+          label:
+            en_US: budget
+            ja_JP: budget
+            pt_BR: budget
+            zh_Hans: budget
+          llm_description: ''
+          max: null
+          min: null
+          name: budget
+          options: []
+          placeholder:
+            en_US: ''
+            ja_JP: ''
+            pt_BR: ''
+            zh_Hans: ''
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: number
+        - auto_generate: null
+          default: '[ ]'
+          form: llm
+          human_description:
+            en_US: ''
+            ja_JP: ''
+            pt_BR: ''
+            zh_Hans: ''
+          label:
+            en_US: competitors
+            ja_JP: competitors
+            pt_BR: competitors
+            zh_Hans: competitors
+          llm_description: ''
+          max: null
+          min: null
+          name: competitors
+          options: []
+          placeholder:
+            en_US: ''
+            ja_JP: ''
+            pt_BR: ''
+            zh_Hans: ''
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: '[ ]'
+          form: llm
+          human_description:
+            en_US: ''
+            ja_JP: ''
+            pt_BR: ''
+            zh_Hans: ''
+          label:
+            en_US: extra_context
+            ja_JP: extra_context
+            pt_BR: extra_context
+            zh_Hans: extra_context
+          llm_description: ''
+          max: null
+          min: null
+          name: extra_context
+          options: []
+          placeholder:
+            en_US: ''
+            ja_JP: ''
+            pt_BR: ''
+            zh_Hans: ''
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: '0'
+          form: llm
+          human_description:
+            en_US: ''
+            ja_JP: ''
+            pt_BR: ''
+            zh_Hans: ''
+          label:
+            en_US: completeness
+            ja_JP: completeness
+            pt_BR: completeness
+            zh_Hans: completeness
+          llm_description: ''
+          max: null
+          min: null
+          name: completeness
+          options: []
+          placeholder:
+            en_US: ''
+            ja_JP: ''
+            pt_BR: ''
+            zh_Hans: ''
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: number
+        params:
+          budget: ''
+          competitors: ''
+          completeness: ''
+          extra_context: ''
+          intent: ''
+        plugin_id: null
+        plugin_unique_identifier: null
+        provider_icon:
+          background: '#FFEAD5'
+          content: 🤖
+        provider_id: cd3b7883-70dd-4623-a3f5-4ae5634b1165
+        provider_name: reasoning_agent
+        provider_type: workflow
+        selected: false
+        title: reasoning_agent
+        tool_configurations: {}
+        tool_description: ''
+        tool_label: reasoning_agent
+        tool_name: reasoning_agent
+        tool_node_version: '2'
+        tool_parameters:
+          budget:
+            type: mixed
+            value: '{{#conversation.customer_budget#}}'
+          competitors:
+            type: mixed
+            value: '{{#conversation.customer_competitors#}}'
+          completeness:
+            type: mixed
+            value: '{{#conversation.profile_completeness#}}'
+          extra_context:
+            type: mixed
+            value: '{{#conversation.extra_context#}}'
+          intent:
+            type: mixed
+            value: '{{#conversation.customer_intent#}}'
+        type: tool
+      height: 54
+      id: '1776640768757'
+      position:
+        x: 834.1740507754705
+        y: 96.04110439529376
+      positionAbsolute:
+        x: 834.1740507754705
+        y: 96.04110439529376
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        is_team_authorization: true
+        paramSchemas:
+        - auto_generate: null
+          default: “ { } ”
+          form: llm
+          human_description:
+            en_US: ''
+            ja_JP: ''
+            pt_BR: ''
+            zh_Hans: ''
+          label:
+            en_US: profile_json
+            ja_JP: profile_json
+            pt_BR: profile_json
+            zh_Hans: profile_json
+          llm_description: ''
+          max: null
+          min: null
+          name: profile_json
+          options: []
+          placeholder:
+            en_US: ''
+            ja_JP: ''
+            pt_BR: ''
+            zh_Hans: ''
+          precision: null
+          required: true
+          scope: null
+          template: null
+          type: object
+        params:
+          profile_json: ''
+        plugin_id: null
+        plugin_unique_identifier: null
+        provider_icon:
+          background: '#FFEAD5'
+          content: 🤖
+        provider_id: ff7a71df-90d9-4b09-9542-0f6594351896
+        provider_name: recommendation_agent
+        provider_type: workflow
+        selected: false
+        title: recommendation_agent
+        tool_configurations: {}
+        tool_description: ''
+        tool_label: recommendation_agent
+        tool_name: recommendation_agent
+        tool_node_version: '2'
+        tool_parameters:
+          knowledge_context:
+            type: mixed
+            value: '{{#1776641154966.result#}}'
+          profile_json:
+            type: mixed
+            value: '{{#conversation.full_profile#}}'
+        type: tool
+      height: 54
+      id: '1776640780997'
+      position:
+        x: 1427.3629706299707
+        y: 195.0775219194021
+      positionAbsolute:
+        x: 1427.3629706299707
+        y: 195.0775219194021
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        is_team_authorization: true
+        paramSchemas:
+        - auto_generate: null
+          default: '" { } "'
+          form: llm
+          human_description:
+            en_US: ''
+            ja_JP: ''
+            pt_BR: ''
+            zh_Hans: ''
+          label:
+            en_US: full_profile
+            ja_JP: full_profile
+            pt_BR: full_profile
+            zh_Hans: full_profile
+          llm_description: ''
+          max: null
+          min: null
+          name: full_profile
+          options: []
+          placeholder:
+            en_US: ''
+            ja_JP: ''
+            pt_BR: ''
+            zh_Hans: ''
+          precision: null
+          required: true
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: '" { } "'
+          form: llm
+          human_description:
+            en_US: ''
+            ja_JP: ''
+            pt_BR: ''
+            zh_Hans: ''
+          label:
+            en_US: recomendation_result
+            ja_JP: recomendation_result
+            pt_BR: recomendation_result
+            zh_Hans: recomendation_result
+          llm_description: ''
+          max: null
+          min: null
+          name: recomendation_result
+          options: []
+          placeholder:
+            en_US: ''
+            ja_JP: ''
+            pt_BR: ''
+            zh_Hans: ''
+          precision: null
+          required: true
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: ''''' '''''
+          form: llm
+          human_description:
+            en_US: ''
+            ja_JP: ''
+            pt_BR: ''
+            zh_Hans: ''
+          label:
+            en_US: extra_context
+            ja_JP: extra_context
+            pt_BR: extra_context
+            zh_Hans: extra_context
+          llm_description: ''
+          max: null
+          min: null
+          name: extra_context
+          options: []
+          placeholder:
+            en_US: ''
+            ja_JP: ''
+            pt_BR: ''
+            zh_Hans: ''
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: '0'
+          form: llm
+          human_description:
+            en_US: ''
+            ja_JP: ''
+            pt_BR: ''
+            zh_Hans: ''
+          label:
+            en_US: completeness
+            ja_JP: completeness
+            pt_BR: completeness
+            zh_Hans: completeness
+          llm_description: ''
+          max: null
+          min: null
+          name: completeness
+          options: []
+          placeholder:
+            en_US: ''
+            ja_JP: ''
+            pt_BR: ''
+            zh_Hans: ''
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: number
+        - auto_generate: null
+          default: ''''' '''''
+          form: llm
+          human_description:
+            en_US: ''
+            ja_JP: ''
+            pt_BR: ''
+            zh_Hans: ''
+          label:
+            en_US: dialogue_summary
+            ja_JP: dialogue_summary
+            pt_BR: dialogue_summary
+            zh_Hans: dialogue_summary
+          llm_description: ''
+          max: null
+          min: null
+          name: dialogue_summary
+          options: []
+          placeholder:
+            en_US: ''
+            ja_JP: ''
+            pt_BR: ''
+            zh_Hans: ''
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: string
+        params:
+          completeness: ''
+          dialogue_summary: ''
+          extra_context: ''
+          full_profile: ''
+          recomendation_result: ''
+        plugin_id: null
+        plugin_unique_identifier: null
+        provider_icon:
+          background: '#FFEAD5'
+          content: 🤖
+        provider_id: 55842584-d48c-41cd-b190-8094882ab706
+        provider_name: memory_agent
+        provider_type: workflow
+        selected: false
+        title: memory_agent
+        tool_configurations: {}
+        tool_description: ''
+        tool_label: memory_agent
+        tool_name: memory_agent
+        tool_node_version: '2'
+        tool_parameters:
+          completeness:
+            type: mixed
+            value: '{{#conversation.profile_completeness#}}'
+          extra_context:
+            type: mixed
+            value: '{{#conversation.extra_context#}}'
+          full_profile:
+            type: mixed
+            value: '{{#conversation.full_profile#}}'
+          recomendation_result:
+            type: mixed
+            value: '{{#conversation.recommendation_result#}}'
+          recommendation_result:
+            type: mixed
+            value: '{{#conversation.recommendation_result#}}'
+        type: tool
+      height: 54
+      id: '1776640814461'
+      position:
+        x: 709.9075994054933
+        y: 681.2334872632333
+      positionAbsolute:
+        x: 709.9075994054933
+        y: 681.2334872632333
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        cases:
+        - case_id: 'true'
+          conditions:
+          - comparison_operator: not empty
+            id: 8ddccfb4-bee2-4c50-960c-479c6db28de3
+            value: ''
+            varType: string
+            variable_selector:
+            - conversation
+            - stall_hint
+          id: 'true'
+          logical_operator: and
+        selected: false
+        title: 条件分支 2
+        type: if-else
+      height: 126
+      id: '1776640902733'
+      position:
+        x: 1111
+        y: -325.941777671924
+      positionAbsolute:
+        x: 1111
+        y: -325.941777671924
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        items:
+        - input_type: variable
+          operation: over-write
+          value:
+          - '1776640768757'
+          - profile_json
+          variable_selector:
+          - conversation
+          - full_profile
+          write_mode: over-write
+        - input_type: constant
+          operation: set
+          value: recommend
+          variable_selector:
+          - conversation
+          - stage
+          write_mode: over-write
+        selected: false
+        title: 存储画像并进入推荐
+        type: assigner
+        version: '2'
+      height: 112
+      id: '1776641009742'
+      position:
+        x: 1547.4067653677246
+        y: 28.745496704142383
+      positionAbsolute:
+        x: 1547.4067653677246
+        y: 28.745496704142383
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        answer: 好的，我已经了解您的需求：{{#conversation.customer_intent#}}，预算{{#conversation.customer_budget#}}万。接下来为您推荐合适的车型。
+        selected: false
+        title: 直接回复 3
+        type: answer
+        variables: []
+      height: 158
+      id: '1776641013757'
+      position:
+        x: 1858.808272087088
+        y: 38.004347085850725
+      positionAbsolute:
+        x: 1858.808272087088
+        y: 38.004347085850725
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        answer: '{{#conversation.summary#}}這是已有信息。请继续询问'
+        selected: false
+        title: 直接回复 4
+        type: answer
+        variables: []
+      height: 122
+      id: '1776641106789'
+      position:
+        x: 1361.571679768309
+        y: -162.73626522954248
+      positionAbsolute:
+        x: 1361.571679768309
+        y: -162.73626522954248
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        dataset_ids:
+        - mlofDmEmmcWgFru4cl2m4qyKvb5KK1AqmqCR8RJAdKmkERKCFooZaky+Byd4Pjb5
+        - bQPIOlKnD3/pcOK2EEw3G+OLwYVhebscmfeVzBqfYoxSoIAHcwhIHtqnPAQIqIVe
+        - zpGm2uhv70wqnOK0wCAmpijNvRM8DsvkXhVXliYMGDcJZAC6G71YQeDinoZTc0p2
+        - uW3CAxyNpAcCuTp4Jzuz3ZcuugZG+qzkUpB2n+PmJ+lqdmXdB+k5La+Rfhkh6No2
+        multiple_retrieval_config:
+          reranking_enable: false
+          reranking_mode: reranking_model
+          reranking_model:
+            model: qwen3-rerank
+            provider: langgenius/tongyi/tongyi
+          top_k: 4
+        query_attachment_selector: []
+        query_variable_selector:
+        - conversation
+        - customer_intent
+        retrieval_mode: multiple
+        selected: false
+        title: 知识检索 2
+        type: knowledge-retrieval
+      height: 54
+      id: '1776641154966'
+      position:
+        x: 1115.6209941732063
+        y: 177.11582939096132
+      positionAbsolute:
+        x: 1115.6209941732063
+        y: 177.11582939096132
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        answer: '{{#conversation.recommendation_result#}}'
+        selected: false
+        title: 直接回复 5
+        type: answer
+        variables: []
+      height: 106
+      id: '1776641191733'
+      position:
+        x: 2478.011191788166
+        y: 389.684556319972
+      positionAbsolute:
+        x: 2478.011191788166
+        y: 389.684556319972
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        items:
+        - input_type: variable
+          operation: over-write
+          value:
+          - '1776640814461'
+          - summary
+          variable_selector:
+          - conversation
+          - summary
+          write_mode: over-write
+        selected: false
+        title: 存储离店摘要
+        type: assigner
+        version: '2'
+      height: 86
+      id: '1776641251629'
+      position:
+        x: 1297.4108753115515
+        y: 743.5288505573477
+      positionAbsolute:
+        x: 1297.4108753115515
+        y: 743.5288505573477
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        answer: '接待摘要：{{#1776640814461.summary#}}
+
+          购买概率：{{#1776640814461.purchase_probability#}}%
+
+          回访话术：
+
+          {{#1776640814461.followup_options[0]#}}
+
+          {{#1776640814461.followup_options[1]#}}'
+        selected: false
+        title: 直接回复 7
+        type: answer
+        variables: []
+      height: 210
+      id: '1776641257590'
+      position:
+        x: 1678.229546357142
+        y: 766.9603898796239
+      positionAbsolute:
+        x: 1678.229546357142
+        y: 766.9603898796239
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        model:
+          completion_params:
+            temperature: 0.2
+          mode: chat
+          name: qwen2.5:1.5b
+          provider: langgenius/ollama/ollama
+        prompt_template:
+        - id: stall-hint-system-prompt
+          role: system
+          text: '你是一个汽车销售培训师。检测到销售顾问卡壳或沉默。
+
+
+            ## 当前客户画像
+
+            - 意图：{{#conversation.customer_intent#}}
+
+            - 预算：{{#conversation.customer_budget#}}万
+
+            - 竞品：{{#conversation.customer_competitors#}}
+
+            - 额外信息：{{#conversation.extra_context#}}
+
+            - 完整度：{{#conversation.profile_completeness#}}
+
+
+            ## 任务
+
+            根据已知信息，生成一句柔性提示，不超过25字。
+
+            示例：若信息很少，输出：递杯水，自然询问购车用途。
+
+
+            只输出提示语本身，不要加引号或额外文字。
+
+            根據系統變量輸出柔性提示。'
+        - id: stall-hint-user-prompt
+          role: user
+          text: 检测到卡壳，请生成提示。
+        selected: false
+        structured_output_enabled: false
+        title: stall_hint_agent
+        type: llm
+        vision:
+          enabled: false
+      height: 90
+      id: '1776670451375'
+      position:
+        x: 1427.3629706299707
+        y: -277.78978507834563
+      positionAbsolute:
+        x: 1427.3629706299707
+        y: -277.78978507834563
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        answer: 卡顿，内容{{#conversation.stall_hint#}}
+        selected: false
+        title: 直接回复 7
+        type: answer
+        variables: []
+      height: 106
+      id: '1776673660872'
+      position:
+        x: 1858.808272087088
+        y: -325.941777671924
+      positionAbsolute:
+        x: 1858.808272087088
+        y: -325.941777671924
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        items:
+        - input_type: variable
+          operation: over-write
+          value:
+          - '1776684480834'
+          - intent
+          variable_selector:
+          - conversation
+          - customer_intent
+          write_mode: over-write
+        - input_type: variable
+          operation: over-write
+          value:
+          - '1776684480834'
+          - budget
+          variable_selector:
+          - conversation
+          - customer_budget
+          write_mode: over-write
+        - input_type: variable
+          operation: over-write
+          value:
+          - '1776684480834'
+          - competitors
+          variable_selector:
+          - conversation
+          - customer_competitors
+          write_mode: over-write
+        - input_type: variable
+          operation: over-write
+          value:
+          - '1776684480834'
+          - extra_context
+          variable_selector:
+          - conversation
+          - extra_context
+          write_mode: over-write
+        - input_type: variable
+          operation: over-write
+          value:
+          - '1776684480834'
+          - completeness
+          variable_selector:
+          - conversation
+          - profile_completeness
+          write_mode: over-write
+        - input_type: variable
+          operation: over-write
+          value:
+          - '1776684480834'
+          - stall_hint
+          variable_selector:
+          - conversation
+          - stall_hint
+          write_mode: over-write
+        selected: false
+        title: 变量赋值 4
+        type: assigner
+        version: '2'
+      height: 216
+      id: '1776684851768'
+      position:
+        x: 834.1740507754705
+        y: -277.78978507834563
+      positionAbsolute:
+        x: 834.1740507754705
+        y: -277.78978507834563
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        dataset_ids:
+        - mlofDmEmmcWgFru4cl2m4qyKvb5KK1AqmqCR8RJAdKmkERKCFooZaky+Byd4Pjb5
+        - uW3CAxyNpAcCuTp4Jzuz3ZcuugZG+qzkUpB2n+PmJ+lqdmXdB+k5La+Rfhkh6No2
+        - zpGm2uhv70wqnOK0wCAmpijNvRM8DsvkXhVXliYMGDcJZAC6G71YQeDinoZTc0p2
+        - bQPIOlKnD3/pcOK2EEw3G+OLwYVhebscmfeVzBqfYoxSoIAHcwhIHtqnPAQIqIVe
+        multiple_retrieval_config:
+          reranking_enable: false
+          reranking_mode: reranking_model
+          reranking_model:
+            model: qwen3-rerank
+            provider: langgenius/tongyi/tongyi
+          top_k: 4
+        query_attachment_selector: []
+        query_variable_selector:
+        - '1776640658463'
+        - query
+        retrieval_mode: multiple
+        selected: false
+        title: 知识检索 3
+        type: knowledge-retrieval
+      height: 54
+      id: '1776763013236'
+      position:
+        x: 375.05651131626115
+        y: 773.5149455019309
+      positionAbsolute:
+        x: 375.05651131626115
+        y: 773.5149455019309
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        memory:
+          query_prompt_template: ''
+          role_prefix:
+            assistant: ''
+            user: ''
+          window:
+            enabled: false
+            size: 50
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: qwen3.6-plus
+          provider: langgenius/tongyi/tongyi
+        prompt_template:
+        - id: 0e1a90af-83d7-4f8f-b513-c47e28119186
+          role: system
+          text: '你是一个汽车销售信息速查助手。根据知识库检索结果，快速、准确地回答查询。
+
+            根據以下輸出内容{{#1776765141364.result#}}
+
+            {{#1776640658463.query#}}
+
+            ## 核心约束
+
+            1. 只能使用知识库检索结果中的信息，绝不编造。
+
+            2. 如果知识库未找到相关信息，直接回答："未找到相关信息，请确认车型名称或关键词。"
+
+            3. 回答简洁结构化，优先使用列表。
+
+
+            ## 输出格式
+
+            ### 查询车型参数
+
+            🚗 **车型名称**
+
+            - 指导价：XXX
+
+            - 级别/座位：XXX
+
+            - 尺寸：车长/轴距
+
+            - 动力：XXX，零百X.X秒
+
+            - 续航/油耗：XXX
+
+            - 核心配置：XXX
+
+
+            ### 查询竞品对比
+
+            📊 **车型A vs 车型B 核心差异**
+
+            | 对比项 | 车型A | 车型B |
+
+            |--------|-------|-------|
+
+            | 空间 | XXX | XXX |
+
+            | 能耗 | XXX | XXX |
+
+            | 智能 | XXX | XXX |
+
+
+            ### 查询政策/补贴
+
+            📋 **政策名称**
+
+            - 适用条件：XXX
+
+            - 补贴金额：XXX
+
+            - 注意事项：XXX
+
+
+            ## 示例
+
+            输入: 理想L8参数
+
+            知识库: 理想L8 Pro，指导价30.98-35.98万，6座增程SUV...
+
+            输出:
+
+            🚗 **理想L8 Pro**
+
+            - 指导价：30.98-35.98万
+
+            - 级别/座位：中大型SUV / 6座
+
+            - 尺寸：5080mm / 轴距3005mm
+
+            - 动力：增程式混动，综合功率330kW，零百5.3秒
+
+            - 续航：纯电210km，综合1315km
+
+            - 核心配置：空气悬架、后排娱乐屏、NOA辅助驾驶'
+        selected: false
+        structured_output_enabled: false
+        title: quick search
+        type: llm
+        vision:
+          enabled: false
+      height: 90
+      id: '1776763149963'
+      position:
+        x: 924.3510664324294
+        y: 870.6755817493969
+      positionAbsolute:
+        x: 924.3510664324294
+        y: 870.6755817493969
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        code: "def main(kb_result: list) -> dict:\n    # 提取每个分段的 content 字段\n    contents\
+          \ = []\n    for item in kb_result:\n        if isinstance(item, dict) and\
+          \ 'content' in item:\n            contents.append(item['content'])\n   \
+          \     elif isinstance(item, str):\n            contents.append(item)\n \
+          \   \n    # 用分隔符拼接\n    combined = \"\\n\\n---\\n\\n\".join(contents) if\
+          \ contents else \"\"\n    \n    return {\"knowledge_text\": combined}"
+        code_language: python3
+        outputs:
+          result:
+            children: null
+            type: string
+        selected: false
+        title: 代码执行 2
+        type: code
+        variables:
+        - value_selector:
+          - '1776763013236'
+          - result
+          value_type: array[object]
+          variable: result
+      height: 54
+      id: '1776765141364'
+      position:
+        x: 675.0007005589712
+        y: 968.8691574660791
+      positionAbsolute:
+        x: 675.0007005589712
+        y: 968.8691574660791
+      selected: true
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '1776640658463'
+          - query
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: qwen2.5:1.5b
+          provider: langgenius/ollama/ollama
+        prompt_template:
+        - id: b61e407d-c624-48b4-bc71-cf04cf44cf7d
+          role: system
+          text: '你是一个汽车销售查询理解助手。将销售顾问的自然语言查询改写为适合知识库检索的标准化关键词串。
+
+            根据{{#1776640658463.query#}}輸出答案
+
+            ## 输出规则
+
+            1. 只输出改写后的关键词串，不要任何解释、前缀或标点。
+
+            2. 关键词之间用空格分隔。
+
+
+            ## 改写策略
+
+            ### 车型参数查询
+
+            - 提取车型名称 + "参数" 或具体维度
+
+            - 口语化：理想的八 → 理想L8 参数
+
+            - 汉兰达混动油耗 → 汉兰达双擎 油耗
+
+
+            ### 竞品对比查询
+
+            - 提取对比的车型A和车型B
+
+            - L8比汉兰达好在哪 → 理想L8 汉兰达 对比
+
+
+            ### 政策查询
+
+            - 旧车置换能补贴多少 → 置换补贴 金额
+
+            - 贷款有没有免息 → 金融方案 0息
+
+
+            ### 竞品规范化映射
+
+            - "理想的八"/"理想8" → "理想L8"
+
+            - "汉兰达混动" → "汉兰达双擎"
+
+            - "比亚迪唐" → "比亚迪唐DM-i"
+
+            - "问界" → "问界M7"
+
+
+            只输出改写后的关键词串，不要任何额外内容。'
+        selected: false
+        title: LLM 3
+        type: llm
+        vision:
+          enabled: false
+      height: 90
+      id: '1776765262045'
+      position:
+        x: 83.11789257526317
+        y: 669.765900191299
+      positionAbsolute:
+        x: 83.11789257526317
+        y: 669.765900191299
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        code: "import json\n\ndef main(json_array: str, text_output: str) -> dict:\n\
+          \    # 初始化默认值\n    recommendation_text = \"\"\n    recommended_model = \"\
+          \"\n    alternative_model = \"\"\n    comparison_card = \"\"\n    \n   \
+          \ # 优先从 json_array 解析\n    data = None\n    if json_array:\n        try:\n\
+          \            parsed = json.loads(json_array)\n            if isinstance(parsed,\
+          \ list) and len(parsed) > 0:\n                data = parsed[0]  # 取数组第一个对象\n\
+          \            elif isinstance(parsed, dict):\n                data = parsed\n\
+          \        except:\n            pass\n    \n    # 如果 json_array 解析失败或为空，尝试从\
+          \ text_output 中提取 JSON\n    if not data and text_output:\n        try:\n\
+          \            # 尝试直接解析\n            data = json.loads(text_output)\n    \
+          \    except:\n            # 尝试提取 JSON 片段\n            import re\n      \
+          \      match = re.search(r'\\{.*\\}', text_output, re.DOTALL)\n        \
+          \    if match:\n                try:\n                    data = json.loads(match.group())\n\
+          \                except:\n                    pass\n    \n    # 如果 data\
+          \ 仍然是字符串，再解析一次\n    if isinstance(data, str):\n        try:\n          \
+          \  data = json.loads(data)\n        except:\n            data = {}\n   \
+          \ \n    if not data:\n        data = {}\n    \n    # 提取字段\n    recommendation_text\
+          \ = data.get(\"recommendation_text\", \"\")\n    recommended_model = data.get(\"\
+          recommended_model\", \"\")\n    alternative_model = data.get(\"alternative_model\"\
+          , \"\")\n    comparison_card = data.get(\"comparison_card\", \"\")\n   \
+          \ \n    # 如果字段仍然为空，尝试从嵌套的 result 或 profile_json 中提取\n    if not recommendation_text:\n\
+          \        for key in [\"result\", \"profile_json\", \"output\"]:\n      \
+          \      if key in data and isinstance(data[key], dict):\n               \
+          \ recommendation_text = data[key].get(\"recommendation_text\", \"\")\n \
+          \               recommended_model = data[key].get(\"recommended_model\"\
+          , \"\")\n                alternative_model = data[key].get(\"alternative_model\"\
+          , \"\")\n                comparison_card = data[key].get(\"comparison_card\"\
+          , \"\")\n                if recommendation_text:\n                    break\n\
+          \    \n    # 确保类型正确\n    recommendation_text = str(recommendation_text)\
+          \ if recommendation_text else \"\"\n    recommended_model = str(recommended_model)\
+          \ if recommended_model else \"\"\n    alternative_model = str(alternative_model)\
+          \ if alternative_model else \"\"\n    comparison_card = str(comparison_card)\
+          \ if comparison_card else \"\"\n    \n    # 如果 comparison_card 是字典或列表，转为\
+          \ JSON 字符串\n    if isinstance(comparison_card, (dict, list)):\n        comparison_card\
+          \ = json.dumps(comparison_card, ensure_ascii=False)\n    \n    return {\n\
+          \        \"recommendation_text\": recommendation_text,\n        \"recommended_model\"\
+          : recommended_model,\n        \"alternative_model\": alternative_model,\n\
+          \        \"comparison_card\": comparison_card\n    }"
+        code_language: python3
+        outputs:
+          alternative_model:
+            children: null
+            type: string
+          comparison_card:
+            children: null
+            type: string
+          recommendation_text:
+            children: null
+            type: string
+          recommended_model:
+            children: null
+            type: string
+        selected: false
+        title: 代码执行 3
+        type: code
+        variables:
+        - value_selector:
+          - '1776640780997'
+          - text
+          value_type: string
+          variable: text
+        - value_selector:
+          - '1776640780997'
+          - files
+          value_type: array[file]
+          variable: file
+        - value_selector:
+          - '1776640780997'
+          - json
+          value_type: array[object]
+          variable: json
+      height: 54
+      id: '1776765899932'
+      position:
+        x: 1547.4067653677246
+        y: 367.4277115430011
+      positionAbsolute:
+        x: 1547.4067653677246
+        y: 367.4277115430011
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: qwen2.5:1.5b
+          provider: langgenius/ollama/ollama
+        prompt_template:
+        - id: 9ad24cc5-159f-4fc2-a6f0-066249f41bd4
+          role: system
+          text: "你是一个汽车销售话术整理助手。你的任务是将推荐结果汇总成一段自然、专业、可直接使用的销售话术。\n\n## 输入\n- recommendation_text：推荐话术草稿\n\
+            - recommended_model：首选推荐车型\n- alternative_model：备选车型\n- comparison_card：竞品对比信息（可能是\
+            \ Markdown 表格或文本）\n\n## 输出规则\n1. 如果首选车型为空，输出：\"客户信息尚不完整，建议继续挖掘需求后再做推荐。\"\
+            \n2. 否则，将输入信息整合为一段流畅的销售话术，包含：\n   - 第一句：肯定客户需求 + 推荐首选车型\n   - 第二句：提及备选车型（如果有）\n\
+            \   - 第三句：如有竞品对比信息，简要说明核心优势\n3. 语言亲切专业，可直接口头表达或发送给客户。\n4. 不要添加任何额外信息或评价。\n\
+            \n## 输出格式\n只输出最终话术文本，不要任何前缀、标签或解释。\n\n## 示例\n输入：\nrecommendation_text:\
+            \ \"推荐理想L8，空间大，舒适性好\"\nrecommended_model: \"理想L8\"\nalternative_model:\
+            \ \"比亚迪唐DM-i\"\ncomparison_card: \"| 对比项 | 理想L8 | 汉兰达 |\\n|--------|--------|--------|\\\
+            n| 第三排空间 | 920mm | 900mm |\"\n\n输出：\n张先生，根据您的家庭出行需求，我为您重点推荐理想L8。它采用六座布局，空间宽敞，舒适性非常出色。当然，比亚迪唐DM-i也是一个不错的备选，性价比很高。相比您看过的汉兰达，理想L8的第三排空间更加充裕，更适合您家两个小孩和老人的出行场景。"
+        selected: false
+        structured_output_enabled: false
+        title: LLM 4
+        type: llm
+        vision:
+          enabled: false
+      height: 90
+      id: '1776766190005'
+      position:
+        x: 2002.067690694872
+        y: 214.72637635109243
+      positionAbsolute:
+        x: 2002.067690694872
+        y: 214.72637635109243
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        items:
+        - input_type: variable
+          operation: over-write
+          value:
+          - '1776766190005'
+          - usage
+          variable_selector:
+          - conversation
+          - recommendation_result
+          write_mode: over-write
+        selected: false
+        title: 变量赋值 4
+        type: assigner
+        version: '2'
+      height: 86
+      id: '1776767840324'
+      position:
+        x: 2377.409903914678
+        y: 145.62464470590055
+      positionAbsolute:
+        x: 2377.409903914678
+        y: 145.62464470590055
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: qwen2.5:1.5b
+          provider: langgenius/ollama/ollama
+        prompt_template:
+        - id: 04e7ce3c-2b5e-44eb-bdcc-a00b7bd7fe56
+          role: system
+          text: "你是一个汽车销售成交专家。你必须严格按规则输出 JSON，不得添加任何额外文字。\n\n## ⚠️ 最高优先级：空值短路规则\n\n\
+            **首先检查以下条件，任一满足即判定为\"信息不足\"：**\n- full_profile{{#conversation.profile_completeness#}}\
+            \ 中的 intent 为空字符串 \"\" 或不存在\n- full_profile 中的 budget_max 为 0 或不存在\n-\
+            \ recommendation_result 中的 recommended_model 为空字符串 \"\" 或不存在\n- completeness\
+            \ < 40\n\n**如果判定为\"信息不足\"，你必须立即返回以下 JSON，一字不差：**\n{\"closing_script\"\
+            :\"客户信息尚不完整，建议继续挖掘需求后再进行报价。\",\"dms_payload\":{\"customer_id\":\"\",\"\
+            session_id\":\"\",\"summary\":\"信息不足\",\"intent_tags\":[],\"purchase_probability\"\
+            :0,\"followup_time\":\"\"},\"sync_status\":\"skipped\"}\n\n**禁止在信息不足时进行任何推理、补充或编造。**\n\
+            \n---\n\n## 正常处理规则（仅当信息完整时执行）\n\n### 输入说明\n- full_profile：客户画像 JSON（intent,\
+            \ budget_max, concerned_attributes, mentioned_competitors, raw_notes）\n\
+            - recommendation_result：推荐结果 JSON（recommended_model, alternative_model,\
+            \ recommendation_text）\n- extra_context：额外上下文（家庭成员、旧车等）\n- completeness：信息完整度\n\
+            - policy_context：政策信息（以旧换新、金融方案等）\n\n### 1. 生成成交助推话术（closing_script）\n\
+            - 2-3 句话，亲切专业\n- 必须提及 recommended_model\n- 仅当 raw_notes 或 extra_context\
+            \ 中明确包含\"现驾\"\"轩逸\"\"旧车\"\"置换\"等词时才提及置换补贴\n- 仅当 policy_context 有内容时，提及金融方案或月供\n\
+            - **禁止编造任何输入中不存在的信息**\n\n### 2. 构造 DMS 数据（dms_payload）\n- customer_id\
+            \ / session_id：从 full_profile 提取，无则为 \"\"\n- summary：1 句话总结（格式：\"XX用户，预算XX万，推荐XX\"\
+            ）\n- intent_tags：数组，包含 intent 和 concerned_attributes\n- purchase_probability：基于\
+            \ completeness 估算（40-95）\n- followup_time：明天日期（YYYY-MM-DD）\n\n### 3. sync_status\n\
+            固定为 \"pending\"\n\n## 输出格式\n{\n  \"closing_script\": \"话术\",\n  \"dms_payload\"\
+            : {\n    \"customer_id\": \"\",\n    \"session_id\": \"\",\n    \"summary\"\
+            : \"摘要\",\n    \"intent_tags\": [],\n    \"purchase_probability\": 75,\n\
+            \    \"followup_time\": \"2025-04-22\"\n  },\n  \"sync_status\": \"pending\"\
+            \n}"
+        selected: false
+        title: LLM 5
+        type: llm
+        vision:
+          enabled: false
+      height: 90
+      id: '1776770383004'
+      position:
+        x: 1098.7830016600167
+        y: 451.3241076349726
+      positionAbsolute:
+        x: 1098.7830016600167
+        y: 451.3241076349726
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    viewport:
+      x: 453.24990039505786
+      y: -421.9964567672608
+      zoom: 1.0717734160421941
+  rag_pipeline_variables: []
